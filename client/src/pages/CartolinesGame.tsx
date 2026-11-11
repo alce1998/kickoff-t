@@ -63,7 +63,7 @@ export default function CartolinesGame() {
 
   // Carica dati stadi
   useEffect(() => {
-    fetch("/data/stadi_cartoline.65c9338a.json")
+    fetch("/data/stadi_cartoline.65c9338a.json?v=121")
       .then((r) => r.json())
       .then((data: Stadio[]) => {
         setStadi(data);
