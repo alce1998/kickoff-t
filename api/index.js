@@ -324,6 +324,30 @@ var cartolinesPoints = mysqlTable("cartolinesPoints", {
   // Lifetime points earned
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull()
 });
+var figurineProgress = mysqlTable("figurineProgress", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(),
+  // Foreign key to users
+  playerId: varchar("playerId", { length: 100 }).notNull(),
+  // e.g. "5023"
+  solved: int("solved").default(0).notNull(),
+  // 1 = solved, 0 = not yet
+  hintsUsed: text("hintsUsed"),
+  // JSON array of hint types used: ["anno_ruolo","nazionalita_presenze","iniziali"]
+  solvedAt: timestamp("solvedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull()
+});
+var figurinePoints = mysqlTable("figurinePoints", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().unique(),
+  // One row per user
+  points: int("points").default(0).notNull(),
+  // Current hint points balance
+  totalEarned: int("totalEarned").default(0).notNull(),
+  // Lifetime points earned
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull()
+});
 var dreamTeamRooms = mysqlTable("dreamTeamRooms", {
   id: int("id").autoincrement().primaryKey(),
   code: varchar("code", { length: 8 }).notNull().unique(),
@@ -2994,6 +3018,93 @@ Inviato automaticamente da La Grande Partita del Passato
         await db.insert(cartolinesProgress).values({
           userId: ctx.user.id,
           stadiumId: input.stadiumId,
+          solved: 0,
+          hintsUsed: JSON.stringify([input.hintType])
+        });
+      }
+      return { success: true, newPoints: currentPoints - cost };
+    })
+  }),
+  // Figurine album (Raccoglitore di Figurine Virtuali)
+  figurine: router({
+    getProgress: protectedProcedure.query(async ({ ctx }) => {
+      const db = await getDb();
+      if (!db) throw new Error("Database not available");
+      await db.execute(sql2.raw(`CREATE TABLE IF NOT EXISTS figurineProgress (id INT AUTO_INCREMENT PRIMARY KEY, userId INT NOT NULL, playerId VARCHAR(100) NOT NULL, solved INT NOT NULL DEFAULT 0, hintsUsed TEXT, solvedAt TIMESTAMP NULL, createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)`));
+      await db.execute(sql2.raw(`CREATE TABLE IF NOT EXISTS figurinePoints (id INT AUTO_INCREMENT PRIMARY KEY, userId INT NOT NULL UNIQUE, points INT NOT NULL DEFAULT 0, totalEarned INT NOT NULL DEFAULT 0, updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)`));
+      const progress = await db.select().from(figurineProgress).where(eq3(figurineProgress.userId, ctx.user.id));
+      const pointsRow = await db.select().from(figurinePoints).where(eq3(figurinePoints.userId, ctx.user.id)).limit(1);
+      return {
+        progress,
+        points: pointsRow[0]?.points ?? 0,
+        totalEarned: pointsRow[0]?.totalEarned ?? 0
+      };
+    }),
+    solvePlayer: protectedProcedure.input(z3.object({ playerId: z3.string().max(100) })).mutation(async ({ ctx, input }) => {
+      const db = await getDb();
+      if (!db) throw new Error("Database not available");
+      const existing = await db.select().from(figurineProgress).where(
+        and2(
+          eq3(figurineProgress.userId, ctx.user.id),
+          eq3(figurineProgress.playerId, input.playerId)
+        )
+      ).limit(1);
+      if (existing.length > 0 && existing[0].solved === 1) {
+        return { alreadySolved: true, points: 0 };
+      }
+      if (existing.length > 0) {
+        await db.update(figurineProgress).set({ solved: 1, solvedAt: /* @__PURE__ */ new Date() }).where(eq3(figurineProgress.id, existing[0].id));
+      } else {
+        await db.insert(figurineProgress).values({
+          userId: ctx.user.id,
+          playerId: input.playerId,
+          solved: 1,
+          hintsUsed: JSON.stringify([]),
+          solvedAt: /* @__PURE__ */ new Date()
+        });
+      }
+      const pointsRow = await db.select().from(figurinePoints).where(eq3(figurinePoints.userId, ctx.user.id)).limit(1);
+      if (pointsRow.length > 0) {
+        await db.update(figurinePoints).set({
+          points: pointsRow[0].points + 1,
+          totalEarned: pointsRow[0].totalEarned + 1
+        }).where(eq3(figurinePoints.userId, ctx.user.id));
+      } else {
+        await db.insert(figurinePoints).values({
+          userId: ctx.user.id,
+          points: 1,
+          totalEarned: 1
+        });
+      }
+      return { alreadySolved: false, points: 1 };
+    }),
+    useHint: protectedProcedure.input(z3.object({
+      playerId: z3.string().max(100),
+      hintType: z3.enum(["anno_ruolo", "nazionalita_presenze", "iniziali"])
+    })).mutation(async ({ ctx, input }) => {
+      const db = await getDb();
+      if (!db) throw new Error("Database not available");
+      const cost = input.hintType === "iniziali" ? 3 : 1;
+      const pointsRow = await db.select().from(figurinePoints).where(eq3(figurinePoints.userId, ctx.user.id)).limit(1);
+      const currentPoints = pointsRow[0]?.points ?? 0;
+      if (currentPoints < cost) {
+        throw new Error("INSUFFICIENT_POINTS");
+      }
+      await db.update(figurinePoints).set({ points: currentPoints - cost }).where(eq3(figurinePoints.userId, ctx.user.id));
+      const existing = await db.select().from(figurineProgress).where(
+        and2(
+          eq3(figurineProgress.userId, ctx.user.id),
+          eq3(figurineProgress.playerId, input.playerId)
+        )
+      ).limit(1);
+      if (existing.length > 0) {
+        const hints = JSON.parse(existing[0].hintsUsed ?? "[]");
+        if (!hints.includes(input.hintType)) hints.push(input.hintType);
+        await db.update(figurineProgress).set({ hintsUsed: JSON.stringify(hints) }).where(eq3(figurineProgress.id, existing[0].id));
+      } else {
+        await db.insert(figurineProgress).values({
+          userId: ctx.user.id,
+          playerId: input.playerId,
           solved: 0,
           hintsUsed: JSON.stringify([input.hintType])
         });

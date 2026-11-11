@@ -7,7 +7,7 @@ import { z } from "zod";
 import nodemailer from "nodemailer";
 import fs from "fs";
 import path from "path";
-import { leaderboard, gameScores, friendRequests, friendships, asyncChallenges, challengeTurns, users, matchmakingQueue, cartolinesProgress, cartolinesPoints, dreamTeamRooms, dreamTeamRoomPlayers } from "../drizzle/schema";
+import { leaderboard, gameScores, friendRequests, friendships, asyncChallenges, challengeTurns, users, matchmakingQueue, cartolinesProgress, cartolinesPoints, figurineProgress, figurinePoints, dreamTeamRooms, dreamTeamRoomPlayers } from "../drizzle/schema";
 import { and, eq, desc, sql } from "drizzle-orm";
 import { getDb } from "./db";
 import { ENV } from "./_core/env";
@@ -2377,6 +2377,136 @@ Inviato automaticamente da La Grande Partita del Passato
           await db.insert(cartolinesProgress).values({
             userId: ctx.user.id,
             stadiumId: input.stadiumId,
+            solved: 0,
+            hintsUsed: JSON.stringify([input.hintType]),
+          });
+        }
+        return { success: true, newPoints: currentPoints - cost };
+      }),
+  }),
+
+  // Figurine album (Raccoglitore di Figurine Virtuali)
+  figurine: router({
+    getProgress: protectedProcedure
+      .query(async ({ ctx }) => {
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        await db.execute(sql.raw(`CREATE TABLE IF NOT EXISTS figurineProgress (id INT AUTO_INCREMENT PRIMARY KEY, userId INT NOT NULL, playerId VARCHAR(100) NOT NULL, solved INT NOT NULL DEFAULT 0, hintsUsed TEXT, solvedAt TIMESTAMP NULL, createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)`));
+        await db.execute(sql.raw(`CREATE TABLE IF NOT EXISTS figurinePoints (id INT AUTO_INCREMENT PRIMARY KEY, userId INT NOT NULL UNIQUE, points INT NOT NULL DEFAULT 0, totalEarned INT NOT NULL DEFAULT 0, updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)`));
+        const progress = await db
+          .select()
+          .from(figurineProgress)
+          .where(eq(figurineProgress.userId, ctx.user.id));
+        const pointsRow = await db
+          .select()
+          .from(figurinePoints)
+          .where(eq(figurinePoints.userId, ctx.user.id))
+          .limit(1);
+        return {
+          progress,
+          points: pointsRow[0]?.points ?? 0,
+          totalEarned: pointsRow[0]?.totalEarned ?? 0,
+        };
+      }),
+
+    solvePlayer: protectedProcedure
+      .input(z.object({ playerId: z.string().max(100) }))
+      .mutation(async ({ ctx, input }) => {
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        const existing = await db
+          .select()
+          .from(figurineProgress)
+          .where(
+            and(
+              eq(figurineProgress.userId, ctx.user.id),
+              eq(figurineProgress.playerId, input.playerId)
+            )
+          )
+          .limit(1);
+        if (existing.length > 0 && existing[0].solved === 1) {
+          return { alreadySolved: true, points: 0 };
+        }
+        if (existing.length > 0) {
+          await db
+            .update(figurineProgress)
+            .set({ solved: 1, solvedAt: new Date() })
+            .where(eq(figurineProgress.id, existing[0].id));
+        } else {
+          await db.insert(figurineProgress).values({
+            userId: ctx.user.id,
+            playerId: input.playerId,
+            solved: 1,
+            hintsUsed: JSON.stringify([]),
+            solvedAt: new Date(),
+          });
+        }
+        const pointsRow = await db
+          .select()
+          .from(figurinePoints)
+          .where(eq(figurinePoints.userId, ctx.user.id))
+          .limit(1);
+        if (pointsRow.length > 0) {
+          await db
+            .update(figurinePoints)
+            .set({
+              points: pointsRow[0].points + 1,
+              totalEarned: pointsRow[0].totalEarned + 1,
+            })
+            .where(eq(figurinePoints.userId, ctx.user.id));
+        } else {
+          await db.insert(figurinePoints).values({
+            userId: ctx.user.id,
+            points: 1,
+            totalEarned: 1,
+          });
+        }
+        return { alreadySolved: false, points: 1 };
+      }),
+
+    useHint: protectedProcedure
+      .input(z.object({
+        playerId: z.string().max(100),
+        hintType: z.enum(["anno_ruolo", "nazionalita_presenze", "iniziali"]),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        const cost = input.hintType === "iniziali" ? 3 : 1;
+        const pointsRow = await db
+          .select()
+          .from(figurinePoints)
+          .where(eq(figurinePoints.userId, ctx.user.id))
+          .limit(1);
+        const currentPoints = pointsRow[0]?.points ?? 0;
+        if (currentPoints < cost) {
+          throw new Error("INSUFFICIENT_POINTS");
+        }
+        await db
+          .update(figurinePoints)
+          .set({ points: currentPoints - cost })
+          .where(eq(figurinePoints.userId, ctx.user.id));
+        const existing = await db
+          .select()
+          .from(figurineProgress)
+          .where(
+            and(
+              eq(figurineProgress.userId, ctx.user.id),
+              eq(figurineProgress.playerId, input.playerId)
+            )
+          )
+          .limit(1);
+        if (existing.length > 0) {
+          const hints: string[] = JSON.parse(existing[0].hintsUsed ?? "[]");
+          if (!hints.includes(input.hintType)) hints.push(input.hintType);
+          await db
+            .update(figurineProgress)
+            .set({ hintsUsed: JSON.stringify(hints) })
+            .where(eq(figurineProgress.id, existing[0].id));
+        } else {
+          await db.insert(figurineProgress).values({
+            userId: ctx.user.id,
+            playerId: input.playerId,
             solved: 0,
             hintsUsed: JSON.stringify([input.hintType]),
           });

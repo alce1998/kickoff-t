@@ -177,6 +177,33 @@ export const cartolinesPoints = mysqlTable("cartolinesPoints", {
 export type CartolinesPoints = typeof cartolinesPoints.$inferSelect;
 export type InsertCartolinesPoints = typeof cartolinesPoints.$inferInsert;
 
+// Figurine album: progress per user per footballer sticker
+export const figurineProgress = mysqlTable("figurineProgress", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(), // Foreign key to users
+  playerId: varchar("playerId", { length: 100 }).notNull(), // e.g. "5023"
+  solved: int("solved").default(0).notNull(), // 1 = solved, 0 = not yet
+  hintsUsed: text("hintsUsed"), // JSON array of hint types used: ["anno_ruolo","nazionalita_presenze","iniziali"]
+  solvedAt: timestamp("solvedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type FigurineProgress = typeof figurineProgress.$inferSelect;
+export type InsertFigurineProgress = typeof figurineProgress.$inferInsert;
+
+// Figurine album: hint points balance per user
+export const figurinePoints = mysqlTable("figurinePoints", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().unique(), // One row per user
+  points: int("points").default(0).notNull(), // Current hint points balance
+  totalEarned: int("totalEarned").default(0).notNull(), // Lifetime points earned
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type FigurinePoints = typeof figurinePoints.$inferSelect;
+export type InsertFigurinePoints = typeof figurinePoints.$inferInsert;
+
 // Dream Team multiplayer rooms
 export const dreamTeamRooms = mysqlTable("dreamTeamRooms", {
   id: int("id").autoincrement().primaryKey(),

@@ -21,6 +21,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { CookieBanner } from "./components/CookieBanner";
 import { UsernameOnboardingModal } from "./components/UsernameOnboardingModal";
+import { FigurinePopup } from "./components/FigurinePopup";
 import ConfermaUsername from "@/pages/ConfermaUsername";
 import AaronsZurkowskiSetup from "@/pages/AaronsZurkowskiSetup";
 import AaronsZurkowskiGame from "@/pages/AaronsZurkowskiGame";
@@ -139,6 +140,7 @@ function App() {
           <Toaster />
           <CookieBanner />
           <InstagramButton />
+          <FigurinePopup />
           <UsernameGuard />
           <Router />
         </TooltipProvider>
