@@ -188,8 +188,10 @@ function FigurinaThumb({
     <div
       ref={ref}
       onClick={onClick}
+      onContextMenu={(e) => e.preventDefault()}
+      onDragStart={(e) => e.preventDefault()}
       title={`#${player.numero}`}
-      className={`relative aspect-[3/4] cursor-pointer border-3 border-black bg-gray-200 overflow-hidden shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 transition-all group ${
+      className={`relative aspect-[3/4] cursor-pointer border-3 border-black bg-gray-200 overflow-hidden select-none shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 transition-all group ${
         isSolved ? "ring-3 ring-green-500" : ""
       }`}
     >
@@ -198,22 +200,28 @@ function FigurinaThumb({
           src={player.photo_url}
           alt="Figurina"
           loading="lazy"
+          draggable={false}
+          onContextMenu={(e) => e.preventDefault()}
           onLoad={() => setLoaded(true)}
           onError={(e) => {
             (e.target as HTMLImageElement).src =
               "https://via.placeholder.com/300x400?text=Figurina";
             setLoaded(true);
           }}
-          className={`w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105 ${
+          className={`w-full h-full object-cover object-top select-none pointer-events-none transition-transform duration-300 group-hover:scale-105 ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
         />
       )}
+      <div
+        className="absolute inset-0 z-10 select-none"
+        onContextMenu={(e) => e.preventDefault()}
+      />
       {!loaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
       {isSolved && (
-        <div className="absolute top-1.5 right-1.5 bg-green-500 text-white rounded-full p-1 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
+        <div className="absolute top-1.5 right-1.5 z-20 bg-green-500 text-white rounded-full p-1 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
           <Trophy className="w-3.5 h-3.5" />
         </div>
       )}
@@ -254,7 +262,9 @@ function StadioThumb({
     <div
       ref={ref}
       onClick={onClick}
-      className={`relative cursor-pointer border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 transition-all group overflow-hidden ${
+      onContextMenu={(e) => e.preventDefault()}
+      onDragStart={(e) => e.preventDefault()}
+      className={`relative cursor-pointer border-3 border-black select-none shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 transition-all group overflow-hidden ${
         isSolved ? "ring-3 ring-green-500" : ""
       }`}
     >
@@ -264,8 +274,10 @@ function StadioThumb({
             src={stadio.foto}
             alt={isSolved ? stadio.nome : "???"}
             loading="lazy"
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
             onLoad={() => setLoaded(true)}
-            className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+            className={`w-full h-full object-cover select-none pointer-events-none transition-all duration-500 group-hover:scale-105 ${
               isSolved ? "" : "grayscale brightness-75"
             } ${loaded ? "opacity-100" : "opacity-0"}`}
             onError={(e) => {
@@ -275,18 +287,22 @@ function StadioThumb({
             }}
           />
         )}
+        <div
+          className="absolute inset-0 z-10 select-none"
+          onContextMenu={(e) => e.preventDefault()}
+        />
         {!loaded && (
           <div className="absolute inset-0 bg-gray-200 animate-pulse" />
         )}
         {!isSolved && (
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
             <span className="text-white font-black text-xl drop-shadow-lg">
               ???
             </span>
           </div>
         )}
         {isSolved && (
-          <div className="absolute top-1.5 right-1.5 bg-green-500 text-white rounded-full p-1 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
+          <div className="absolute top-1.5 right-1.5 z-20 bg-green-500 text-white rounded-full p-1 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
             <Trophy className="w-3.5 h-3.5" />
           </div>
         )}
@@ -380,7 +396,7 @@ export function FigurinePopup() {
   // Load both datasets
   useEffect(() => {
     setLoadingPlayers(true);
-    fetch("/data/figurine_players.json?v=1538")
+    fetch("/data/figurine_players.json?v=anticheat1")
       .then((r) => r.json())
       .then((data: FigurinaPlayer[]) => {
         setPlayers(data);
@@ -389,7 +405,7 @@ export function FigurinePopup() {
       .catch(() => setLoadingPlayers(false));
 
     setLoadingStadi(true);
-    fetch("/data/stadi_cartoline.65c9338a.json?v=121")
+    fetch("/data/stadi_cartoline.65c9338a.json?v=anticheat1")
       .then((r) => r.json())
       .then((data: Stadio[]) => {
         setStadi(data);
@@ -1121,18 +1137,28 @@ export function FigurinePopup() {
                 </div>
 
                 {/* Immagine ingrandita */}
-                <div className="relative max-w-xs mx-auto aspect-[3/4] border-4 border-black bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+                <div
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
+                  className="relative max-w-xs mx-auto aspect-[3/4] border-4 border-black bg-white select-none shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden"
+                >
                   <img
                     src={selectedPlayer.photo_url}
                     alt={isSelectedPlayerSolved ? selectedPlayer.name : "???"}
-                    className="w-full h-full object-cover object-top"
+                    draggable={false}
+                    onContextMenu={(e) => e.preventDefault()}
+                    className="w-full h-full object-cover object-top select-none pointer-events-none"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
                         "https://via.placeholder.com/400x530?text=Figurina";
                     }}
                   />
+                  <div
+                    className="absolute inset-0 z-10 select-none"
+                    onContextMenu={(e) => e.preventDefault()}
+                  />
                   {isSelectedPlayerSolved && (
-                    <div className="absolute top-3 right-3 bg-green-500 text-white px-2.5 py-1 font-bold uppercase text-xs border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1">
+                    <div className="absolute top-3 right-3 z-20 bg-green-500 text-white px-2.5 py-1 font-bold uppercase text-xs border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1">
                       <Trophy className="w-3.5 h-3.5" />
                       Sbloccata!
                     </div>
@@ -1452,11 +1478,17 @@ export function FigurinePopup() {
                 </div>
 
                 {/* Foto Stadio */}
-                <div className="relative border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden bg-white">
+                <div
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
+                  className="relative border-4 border-black select-none shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden bg-white"
+                >
                   <img
                     src={selectedStadio.foto}
                     alt={isSelectedStadioSolved ? selectedStadio.nome : "???"}
-                    className={`w-full aspect-video object-cover transition-all duration-700 ${
+                    draggable={false}
+                    onContextMenu={(e) => e.preventDefault()}
+                    className={`w-full aspect-video object-cover select-none pointer-events-none transition-all duration-700 ${
                       isSelectedStadioSolved ? "" : "grayscale brightness-75"
                     }`}
                     onError={(e) => {
@@ -1464,15 +1496,19 @@ export function FigurinePopup() {
                         "https://via.placeholder.com/800x450?text=Stadio";
                     }}
                   />
+                  <div
+                    className="absolute inset-0 z-10 select-none"
+                    onContextMenu={(e) => e.preventDefault()}
+                  />
                   {!isSelectedStadioSolved && (
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
                       <span className="text-white font-black text-4xl drop-shadow-lg">
                         ???
                       </span>
                     </div>
                   )}
                   {isSelectedStadioSolved && (
-                    <div className="absolute top-3 right-3 bg-green-500 text-white px-2.5 py-1 font-bold uppercase text-xs border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1">
+                    <div className="absolute top-3 right-3 z-20 bg-green-500 text-white px-2.5 py-1 font-bold uppercase text-xs border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1">
                       <Trophy className="w-3.5 h-3.5" />
                       Sbloccato!
                     </div>

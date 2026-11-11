@@ -237,7 +237,7 @@ export default function FootsterGame() {
 
   // ─── Carica database ───────────────────────────────────────────────────────
   useEffect(() => {
-    fetch("/data/footster_players.0d91baeb.json")
+    fetch("/data/footster_players.0d91baeb.json?v=anticheat1")
       .then((r) => r.json())
       .then((data: FootsterPlayer[]) => {
         setDb(data);
@@ -589,12 +589,18 @@ export default function FootsterGame() {
         </div>
 
         {/* Carta calciatore */}
-        <div className="relative w-48 h-64 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden bg-gray-200 flex-shrink-0">
+        <div
+          onContextMenu={(e) => e.preventDefault()}
+          onDragStart={(e) => e.preventDefault()}
+          className="relative w-48 h-64 border-4 border-black select-none shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden bg-gray-200 flex-shrink-0"
+        >
           {!imgError ? (
             <img
               src={currentCard.photo_url}
               alt="Calciatore"
-              className="w-full h-full object-cover object-top"
+              draggable={false}
+              onContextMenu={(e) => e.preventDefault()}
+              className="w-full h-full object-cover object-top select-none pointer-events-none"
               onError={() => setImgError(true)}
             />
           ) : (
@@ -832,11 +838,17 @@ function TimelineSlots({ timeline, onSlotSelect, selectedSlot, highlightSlot, di
             </button>
             {/* Carta calciatore */}
             {i < timeline.length && (
-              <div className="flex-shrink-0 w-20 h-28 border-2 border-black overflow-hidden bg-gray-200 relative">
+              <div
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
+                className="flex-shrink-0 w-20 h-28 border-2 border-black overflow-hidden bg-gray-200 relative select-none"
+              >
                 <img
                   src={timeline[i].player.photo_url}
-                  alt={timeline[i].player.name}
-                  className="w-full h-full object-cover object-top"
+                  alt="Carta"
+                  draggable={false}
+                  onContextMenu={(e) => e.preventDefault()}
+                  className="w-full h-full object-cover object-top select-none pointer-events-none"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
                   }}

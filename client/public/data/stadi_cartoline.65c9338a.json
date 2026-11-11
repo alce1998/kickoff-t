@@ -10,7 +10,7 @@
     "squadre": [
       "Liverpool"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-anfield_447b3937.jpg"
+    "foto": "/api/img?id=9ef7aabba3d6ba24"
   },
   {
     "id": "emirates-stadium",
@@ -23,7 +23,7 @@
     "squadre": [
       "Arsenal"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-emirates-stadium_753a46f5.jpg"
+    "foto": "/api/img?id=45fd0f3c80fcafdd"
   },
   {
     "id": "tottenham-hotspur-stadium",
@@ -36,7 +36,7 @@
     "squadre": [
       "Tottenham Hotspur"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-tottenham-hotspur-stadium_1fc467c1.jpg"
+    "foto": "/api/img?id=8fe449d972a8252d"
   },
   {
     "id": "london-stadium",
@@ -49,7 +49,7 @@
     "squadre": [
       "West Ham United"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-london-stadium_9dc85037.jpg"
+    "foto": "/api/img?id=dd9f22097c07907b"
   },
   {
     "id": "villa-park",
@@ -62,7 +62,7 @@
     "squadre": [
       "Aston Villa"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-villa-park_063ed91b.jpg"
+    "foto": "/api/img?id=a8aca89c7a71c162"
   },
   {
     "id": "st-james-park",
@@ -75,7 +75,7 @@
     "squadre": [
       "Newcastle United"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-st-james-park_78d396bd.jpg"
+    "foto": "/api/img?id=c44ced2fce12ed46"
   },
   {
     "id": "goodison-park",
@@ -88,7 +88,7 @@
     "squadre": [
       "Everton"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-goodison-park_89ba0456.jpg"
+    "foto": "/api/img?id=3a6033b7aa1bf0ec"
   },
   {
     "id": "st-marys-stadium",
@@ -101,7 +101,7 @@
     "squadre": [
       "Southampton"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-st-marys-stadium_fb2eaca9.jpg"
+    "foto": "/api/img?id=20b6ae1109c2d624"
   },
   {
     "id": "molineux-stadium",
@@ -114,7 +114,7 @@
     "squadre": [
       "Wolverhampton Wanderers"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-molineux-stadium_422e4e87.jpg"
+    "foto": "/api/img?id=018e7cbfbbfc157b"
   },
   {
     "id": "falmer-stadium",
@@ -127,7 +127,7 @@
     "squadre": [
       "Brighton & Hove Albion"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-falmer-stadium_9bdc8aa6.jpg"
+    "foto": "/api/img?id=033bbab08cc82883"
   },
   {
     "id": "selhurst-park",
@@ -140,7 +140,7 @@
     "squadre": [
       "Crystal Palace"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-selhurst-park_2e5784e0.jpg"
+    "foto": "/api/img?id=1079bbf2ac0c7a30"
   },
   {
     "id": "craven-cottage",
@@ -153,7 +153,7 @@
     "squadre": [
       "Fulham"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-craven-cottage_1f02d871.jpg"
+    "foto": "/api/img?id=823ac73403e4e466"
   },
   {
     "id": "king-power-stadium",
@@ -166,7 +166,7 @@
     "squadre": [
       "Leicester City"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-king-power-stadium_22b7c6a9.jpg"
+    "foto": "/api/img?id=d1581f37988db69f"
   },
   {
     "id": "city-ground",
@@ -179,7 +179,7 @@
     "squadre": [
       "Nottingham Forest"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-city-ground_5fb32db8.jpg"
+    "foto": "/api/img?id=11bff2cddb9de793"
   },
   {
     "id": "portman-road",
@@ -192,7 +192,7 @@
     "squadre": [
       "Ipswich Town"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-portman-road_a5dac6dc.jpg"
+    "foto": "/api/img?id=1f24fe2181eaadb9"
   },
   {
     "id": "old-trafford",
@@ -205,7 +205,7 @@
     "squadre": [
       "Manchester United"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-old-trafford_6f9820fe.jpg"
+    "foto": "/api/img?id=fa4b8e5242368a49"
   },
   {
     "id": "san-siro",
@@ -219,7 +219,7 @@
       "Inter",
       "Milan"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-san-siro_93fc1009.jpg"
+    "foto": "/api/img?id=3b7065ce57fdbfe0"
   },
   {
     "id": "stadio-olimpico",
@@ -233,7 +233,7 @@
       "Roma",
       "Lazio"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-olimpico_eaee5f4a.jpg"
+    "foto": "/api/img?id=1fbc7527c76e3078"
   },
   {
     "id": "stadio-diego-armando-maradona",
@@ -246,7 +246,7 @@
     "squadre": [
       "Napoli"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-diego-armando-maradona_63268db8.jpg"
+    "foto": "/api/img?id=65119938f29b6f04"
   },
   {
     "id": "stadio-artemio-franchi",
@@ -259,7 +259,7 @@
     "squadre": [
       "Fiorentina"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-artemio-franchi_a7cbd442.jpg"
+    "foto": "/api/img?id=f8435cca3d574f4c"
   },
   {
     "id": "stadio-renato-dallara",
@@ -272,7 +272,7 @@
     "squadre": [
       "Bologna"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-renato-dallara_180fc562.jpg"
+    "foto": "/api/img?id=c43c45d58a96c54a"
   },
   {
     "id": "stadio-luigi-ferraris",
@@ -286,7 +286,7 @@
       "Genoa",
       "Sampdoria"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-luigi-ferraris_fc527492.jpg"
+    "foto": "/api/img?id=0babc004ffceb7b9"
   },
   {
     "id": "stadio-olimpico-grande-torino",
@@ -299,7 +299,7 @@
     "squadre": [
       "Torino"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-olimpico-grande-torino_cf11f37a.jpg"
+    "foto": "/api/img?id=67698eb3d0caf7f8"
   },
   {
     "id": "stadio-marcantonio-bentegodi",
@@ -312,7 +312,7 @@
     "squadre": [
       "Hellas Verona"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-marcantonio-bentegodi_9960f03c.jpg"
+    "foto": "/api/img?id=e71ededba6edc8a5"
   },
   {
     "id": "stadio-ennio-tardini",
@@ -325,7 +325,7 @@
     "squadre": [
       "Parma"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-ennio-tardini_fce4ccd0.jpg"
+    "foto": "/api/img?id=13c894cf93271e7d"
   },
   {
     "id": "stadio-friuli",
@@ -338,7 +338,7 @@
     "squadre": [
       "Udinese"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-friuli_3fa75ded.jpg"
+    "foto": "/api/img?id=7c4c8e7258d1dc37"
   },
   {
     "id": "unipol-domus",
@@ -351,7 +351,7 @@
     "squadre": [
       "Cagliari"
     ],
-    "foto": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663236579785/LbyIYSMwlKfnTWHd.jpg"
+    "foto": "/api/img?id=4d1c383a1add6339"
   },
   {
     "id": "stadio-carlo-castellani",
@@ -364,7 +364,7 @@
     "squadre": [
       "Empoli"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-carlo-castellani_bf8742a4.jpg"
+    "foto": "/api/img?id=49d1dba1775edd46"
   },
   {
     "id": "stadio-giuseppe-sinigaglia",
@@ -377,7 +377,7 @@
     "squadre": [
       "Como"
     ],
-    "foto": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663236579785/RChsUdWGutTujjVQ.webp"
+    "foto": "/api/img?id=073a13336bc9652f"
   },
   {
     "id": "stadio-arechi",
@@ -390,7 +390,7 @@
     "squadre": [
       "Salernitana"
     ],
-    "foto": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663236579785/wSqkQajILIJKnRzi.jpg"
+    "foto": "/api/img?id=25ca5a85a774b8a2"
   },
   {
     "id": "stadio-renzo-barbera",
@@ -403,7 +403,7 @@
     "squadre": [
       "Palermo"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadio-renzo-barbera_8e6264e1.jpg"
+    "foto": "/api/img?id=476dac251bd73525"
   },
   {
     "id": "santiago-bernabu",
@@ -416,7 +416,7 @@
     "squadre": [
       "Real Madrid"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-santiago-bernabeu_32b6760e.jpg"
+    "foto": "/api/img?id=a7333914b17e7991"
   },
   {
     "id": "camp-nou",
@@ -429,7 +429,7 @@
     "squadre": [
       "FC Barcelona"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-camp-nou_a5652c80.jpg"
+    "foto": "/api/img?id=ec899080f6ab191e"
   },
   {
     "id": "rcde-stadium",
@@ -442,7 +442,7 @@
     "squadre": [
       "Espanyol"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-rcde-stadium_ec9add42.jpg"
+    "foto": "/api/img?id=ffa5deadbc895854"
   },
   {
     "id": "estadio-de-la-cermica",
@@ -455,7 +455,7 @@
     "squadre": [
       "Villarreal CF"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-estadio-de-la-cermica_a49ff0df.jpg"
+    "foto": "/api/img?id=0db5a07f7f31c641"
   },
   {
     "id": "estadi-mallorca-son-moix",
@@ -468,7 +468,7 @@
     "squadre": [
       "Mallorca"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-estadi-mallorca-son-moix_9c352ab4.jpg"
+    "foto": "/api/img?id=6afc833f1fba017c"
   },
   {
     "id": "jos-zorrilla",
@@ -481,7 +481,7 @@
     "squadre": [
       "Real Valladolid"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-jose-zorrilla_a4295fe2.jpg"
+    "foto": "/api/img?id=b72d0410f851baab"
   },
   {
     "id": "butarque",
@@ -494,7 +494,7 @@
     "squadre": [
       "CD Leganés"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-butarque_1d40914c.webp"
+    "foto": "/api/img?id=a4961cb47bcc17f7"
   },
   {
     "id": "allianz-arena",
@@ -507,7 +507,7 @@
     "squadre": [
       "Bayern Munich"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-allianz-arena_be54f164.jpg"
+    "foto": "/api/img?id=b62b7925207f8387"
   },
   {
     "id": "mhparena",
@@ -520,7 +520,7 @@
     "squadre": [
       "VfB Stuttgart"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-mhparena_0c06edab.jpg"
+    "foto": "/api/img?id=fc3d096d54d212d9"
   },
   {
     "id": "volksparkstadion",
@@ -533,7 +533,7 @@
     "squadre": [
       "Hamburger SV"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-volksparkstadion_ebe05478.jpg"
+    "foto": "/api/img?id=aaa9f895e42f779d"
   },
   {
     "id": "borussia-park",
@@ -546,7 +546,7 @@
     "squadre": [
       "Borussia Mönchengladbach"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-borussia-park_32ab3d8c.jpg"
+    "foto": "/api/img?id=14a339165ba2e2a0"
   },
   {
     "id": "merkur-spiel-arena",
@@ -559,7 +559,7 @@
     "squadre": [
       "Fortuna Düsseldorf"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-merkur-spiel-arena_331ed123.jpg"
+    "foto": "/api/img?id=fabdf336b7dee776"
   },
   {
     "id": "rheinenergiestadion",
@@ -572,7 +572,7 @@
     "squadre": [
       "1. FC Köln"
     ],
-    "foto": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663236579785/dycSCNmOChuDskCm.jpg"
+    "foto": "/api/img?id=aaf5e4804266ac4c"
   },
   {
     "id": "weserstadion",
@@ -585,7 +585,7 @@
     "squadre": [
       "Werder Bremen"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-weserstadion_8fa3bbc4.jpg"
+    "foto": "/api/img?id=d90ebce9fb2ee053"
   },
   {
     "id": "europa-park-stadion",
@@ -598,7 +598,7 @@
     "squadre": [
       "SC Freiburg"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-europa-park-stadion_db5aef30.jpg"
+    "foto": "/api/img?id=16830baa052760a2"
   },
   {
     "id": "mewa-arena",
@@ -611,7 +611,7 @@
     "squadre": [
       "Mainz 05"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-mewa-arena_9c42caa3.jpg"
+    "foto": "/api/img?id=acb976041c9a086d"
   },
   {
     "id": "bayarena",
@@ -624,7 +624,7 @@
     "squadre": [
       "Bayer Leverkusen"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-bayarena_fdc743c3.jpg"
+    "foto": "/api/img?id=7a2278fd087292ed"
   },
   {
     "id": "volkswagen-arena",
@@ -637,7 +637,7 @@
     "squadre": [
       "VfL Wolfsburg"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-volkswagen-arena_30874dd2.jpg"
+    "foto": "/api/img?id=93cc2b610a5fd7ab"
   },
   {
     "id": "stadion-an-der-alten-frsterei",
@@ -650,7 +650,7 @@
     "squadre": [
       "Union Berlin"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stadion-an-der-alten-frsterei_dd77dd63.jpg"
+    "foto": "/api/img?id=cd81719d31e1e326"
   },
   {
     "id": "parc-olympique-lyonnais",
@@ -663,7 +663,7 @@
     "squadre": [
       "Olympique Lyonnais"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-parc-olympique-lyonnais_d42980e1.jpg"
+    "foto": "/api/img?id=06b18414c12f8dca"
   },
   {
     "id": "stade-pierre-mauroy",
@@ -676,7 +676,7 @@
     "squadre": [
       "Lille OSC"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-pierre-mauroy_d6fff59c.jpg"
+    "foto": "/api/img?id=e1cb7cff4e430f66"
   },
   {
     "id": "parc-des-princes",
@@ -689,7 +689,7 @@
     "squadre": [
       "Paris Saint-Germain"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-parc-des-princes_b9619ac6.jpg"
+    "foto": "/api/img?id=3362de27b2737a54"
   },
   {
     "id": "stade-geoffroy-guichard",
@@ -702,7 +702,7 @@
     "squadre": [
       "AS Saint-Étienne"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-geoffroy-guichard_a764a0ff.jpg"
+    "foto": "/api/img?id=acd21f2a4ef23b7d"
   },
   {
     "id": "stade-bollaert-delelis",
@@ -715,7 +715,7 @@
     "squadre": [
       "RC Lens"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-bollaert-delelis_5daaef06.jpg"
+    "foto": "/api/img?id=ce6c2d015744f3be"
   },
   {
     "id": "stade-de-la-beaujoire",
@@ -728,7 +728,7 @@
     "squadre": [
       "FC Nantes"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-de-la-beaujoire_212f32ee.jpg"
+    "foto": "/api/img?id=cb6806013a398707"
   },
   {
     "id": "allianz-riviera",
@@ -741,7 +741,7 @@
     "squadre": [
       "OGC Nice"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-allianz-riviera_a0670bf3.jpg"
+    "foto": "/api/img?id=74434a35b26b2f7b"
   },
   {
     "id": "stade-de-la-mosson",
@@ -754,7 +754,7 @@
     "squadre": [
       "Montpellier HSC"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-de-la-mosson_ece7da68.jpg"
+    "foto": "/api/img?id=1d4fda65d053a9a4"
   },
   {
     "id": "roazhon-park",
@@ -767,7 +767,7 @@
     "squadre": [
       "Stade Rennais"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-roazhon-park_ce6e7ba7.jpg"
+    "foto": "/api/img?id=0b1d22a4c2dad1d1"
   },
   {
     "id": "stade-de-la-meinau",
@@ -780,7 +780,7 @@
     "squadre": [
       "RC Strasbourg Alsace"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-de-la-meinau_f1d32fa1.jpg"
+    "foto": "/api/img?id=8743584d66a9230b"
   },
   {
     "id": "stade-auguste-delaune",
@@ -793,7 +793,7 @@
     "squadre": [
       "Stade de Reims"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-auguste-delaune_2ee58e87.jpg"
+    "foto": "/api/img?id=4e2e9fc9a6677a2f"
   },
   {
     "id": "stade-louis-ii",
@@ -806,7 +806,7 @@
     "squadre": [
       "AS Monaco"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-louis-ii_5880dcce.jpg"
+    "foto": "/api/img?id=7e5fa50c6ef89db2"
   },
   {
     "id": "stade-ocane",
@@ -819,7 +819,7 @@
     "squadre": [
       "Le Havre AC"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-ocane_4a267bcc.jpg"
+    "foto": "/api/img?id=fb946798c1d93f44"
   },
   {
     "id": "stade-raymond-kopa",
@@ -832,7 +832,7 @@
     "squadre": [
       "Angers SCO"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-raymond-kopa_d0dae414.jpg"
+    "foto": "/api/img?id=da61b941df99da31"
   },
   {
     "id": "stade-francis-le-bl",
@@ -845,7 +845,7 @@
     "squadre": [
       "Stade Brestois 29"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-francis-le-bl_3a6f1d92.jpg"
+    "foto": "/api/img?id=a77c72f58a56e4b3"
   },
   {
     "id": "stade-de-labb-deschamps",
@@ -858,7 +858,7 @@
     "squadre": [
       "AJ Auxerre"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-stade-de-labb-deschamps_664d1339.jpg"
+    "foto": "/api/img?id=0cde913d22a9e326"
   },
   {
     "id": "la-bombonera",
@@ -871,7 +871,7 @@
     "squadre": [
       "Boca Juniors"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-la-bombonera_384e28d3.jpg"
+    "foto": "/api/img?id=e6adc8a780b5a0fd"
   },
   {
     "id": "estadio-azteca",
@@ -885,7 +885,7 @@
       "Club América",
       "Cruz Azul"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-estadio-azteca_ccd9e1ed.jpg"
+    "foto": "/api/img?id=c7fb78d0e396c964"
   },
   {
     "id": "estadio-centenario",
@@ -898,7 +898,7 @@
     "squadre": [
       "Nazionale di Uruguay"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-estadio-centenario_4edad47f.jpg"
+    "foto": "/api/img?id=34940cefc6b001f4"
   },
   {
     "id": "estdio-da-luz",
@@ -911,7 +911,7 @@
     "squadre": [
       "Benfica"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-estdio-da-luz_be0ededa.jpg"
+    "foto": "/api/img?id=fa2ef9571535e541"
   },
   {
     "id": "estdio-do-drago",
@@ -924,7 +924,7 @@
     "squadre": [
       "FC Porto"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-estdio-do-drago_3e7038b0.jpg"
+    "foto": "/api/img?id=0dd6b4154bc9c64c"
   },
   {
     "id": "estdio-jos-alvalade",
@@ -937,7 +937,7 @@
     "squadre": [
       "Sporting CP"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-estdio-jos-alvalade_dee16628.jpg"
+    "foto": "/api/img?id=68edf76eb7ff92ed"
   },
   {
     "id": "celtic-park",
@@ -950,7 +950,7 @@
     "squadre": [
       "Celtic"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-celtic-park_4114fb66.jpg"
+    "foto": "/api/img?id=93b74de899e228fb"
   },
   {
     "id": "ibrox-stadium",
@@ -963,7 +963,7 @@
     "squadre": [
       "Rangers"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-ibrox-stadium_78d65145.jpg"
+    "foto": "/api/img?id=3fe157da270237c0"
   },
   {
     "id": "johan-cruyff-arena",
@@ -976,7 +976,7 @@
     "squadre": [
       "Ajax"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-johan-cruyff-arena_39c9ec72.jpg"
+    "foto": "/api/img?id=f9b4a29be0bb432f"
   },
   {
     "id": "de-kuip",
@@ -989,7 +989,7 @@
     "squadre": [
       "Feyenoord"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-de-kuip_ec1946f5.jpg"
+    "foto": "/api/img?id=38cf9a59e72fff54"
   },
   {
     "id": "philips-stadion",
@@ -1002,7 +1002,7 @@
     "squadre": [
       "PSV Eindhoven"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-philips-stadion_374f5d37.jpg"
+    "foto": "/api/img?id=71608ac34aa20906"
   },
   {
     "id": "kr-saracolu",
@@ -1015,7 +1015,7 @@
     "squadre": [
       "Fenerbahçe"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-sukru-saracoglu_327adcd5.jpg"
+    "foto": "/api/img?id=fff474936bfb9e40"
   },
   {
     "id": "beikta-park",
@@ -1028,7 +1028,7 @@
     "squadre": [
       "Beşiktaş"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-beikta-park_35a72fa3.jpg"
+    "foto": "/api/img?id=f456e11d5d01027e"
   },
   {
     "id": "karaiskakis-stadium",
@@ -1041,7 +1041,7 @@
     "squadre": [
       "Olympiacos"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-karaiskakis-stadium_7884d872.jpg"
+    "foto": "/api/img?id=e9712f7a4e994870"
   },
   {
     "id": "fnb-stadium",
@@ -1054,7 +1054,7 @@
     "squadre": [
       "Kaizer Chiefs"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-fnb-stadium_9cdc97c6.jpg"
+    "foto": "/api/img?id=523824406b928b17"
   },
   {
     "id": "cairo-international-stadium",
@@ -1068,7 +1068,7 @@
       "Al Ahly",
       "Zamalek"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-cairo-international-stadium_f99b6ae0.jpg"
+    "foto": "/api/img?id=e014f8390889b309"
   },
   {
     "id": "saitama-stadium-2002",
@@ -1081,7 +1081,7 @@
     "squadre": [
       "Urawa Red Diamonds"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-saitama-stadium-2002_e5b3b94d.jpg"
+    "foto": "/api/img?id=e315466698d5213e"
   },
   {
     "id": "mercedes-benz-stadium",
@@ -1094,7 +1094,7 @@
     "squadre": [
       "Atlanta United"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-mercedes-benz-stadium_842efcd3.jpg"
+    "foto": "/api/img?id=da6d09e276a5bab6"
   },
   {
     "id": "luzhniki-stadium",
@@ -1107,7 +1107,7 @@
     "squadre": [
       "Nazionale di Russia"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-luzhniki-stadium_a2c42b0e.jpg"
+    "foto": "/api/img?id=fdc8bac46bff5b3f"
   },
   {
     "id": "gasprom-arena",
@@ -1120,7 +1120,7 @@
     "squadre": [
       "Zenit San Pietroburgo"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-gasprom-arena_1a6470dc.jpg"
+    "foto": "/api/img?id=ec9a77d512842bc3"
   },
   {
     "id": "estdio-do-morumbi",
@@ -1133,7 +1133,7 @@
     "squadre": [
       "São Paulo FC"
     ],
-    "foto": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236579785/HKJjpicXDVEpHh2tJJ84LZ/stadio-estdio-do-morumbi_6ed1c617.jpg"
+    "foto": "/api/img?id=47054bb703b9938a"
   },
   {
     "id": "allianz-stadium",
@@ -1146,7 +1146,7 @@
     "squadre": [
       "Juventus"
     ],
-    "foto": "/stadi/allianz-stadium.jpg"
+    "foto": "/api/img?id=0eb229c5bed3a8b1"
   },
   {
     "id": "gewiss-stadium",
@@ -1159,7 +1159,7 @@
     "squadre": [
       "Atalanta"
     ],
-    "foto": "/stadi/gewiss-stadium.jpg"
+    "foto": "/api/img?id=05eafd4d7048365f"
   },
   {
     "id": "stadio-via-del-mare",
@@ -1172,7 +1172,7 @@
     "squadre": [
       "Lecce"
     ],
-    "foto": "/stadi/stadio-via-del-mare.jpg"
+    "foto": "/api/img?id=92e12b3da2700e8b"
   },
   {
     "id": "mapei-stadium",
@@ -1185,7 +1185,7 @@
     "squadre": [
       "Sassuolo"
     ],
-    "foto": "/stadi/mapei-stadium.jpg"
+    "foto": "/api/img?id=8c5d20fb25e7ca89"
   },
   {
     "id": "u-power-stadium",
@@ -1198,7 +1198,7 @@
     "squadre": [
       "Monza"
     ],
-    "foto": "/stadi/u-power-stadium.jpg"
+    "foto": "/api/img?id=5b0dc2e8ed396f36"
   },
   {
     "id": "stamford-bridge",
@@ -1211,7 +1211,7 @@
     "squadre": [
       "Chelsea"
     ],
-    "foto": "/stadi/stamford-bridge.jpg"
+    "foto": "/api/img?id=ff33d3d0a322e93e"
   },
   {
     "id": "etihad-stadium",
@@ -1224,7 +1224,7 @@
     "squadre": [
       "Manchester City"
     ],
-    "foto": "/stadi/etihad-stadium.jpg"
+    "foto": "/api/img?id=1e3943cb12e4ea6b"
   },
   {
     "id": "gtech-community-stadium",
@@ -1237,7 +1237,7 @@
     "squadre": [
       "Brentford"
     ],
-    "foto": "/stadi/gtech-community-stadium.jpg"
+    "foto": "/api/img?id=bdf9642f93c5d4ea"
   },
   {
     "id": "vitality-stadium",
@@ -1250,7 +1250,7 @@
     "squadre": [
       "AFC Bournemouth"
     ],
-    "foto": "/stadi/vitality-stadium.jpg"
+    "foto": "/api/img?id=718ef8ac205c42d5"
   },
   {
     "id": "civitas-metropolitano",
@@ -1263,7 +1263,7 @@
     "squadre": [
       "Atlético Madrid"
     ],
-    "foto": "/stadi/civitas-metropolitano.jpg"
+    "foto": "/api/img?id=ebfabc30e723ffa6"
   },
   {
     "id": "benito-villamarin",
@@ -1276,7 +1276,7 @@
     "squadre": [
       "Real Betis"
     ],
-    "foto": "/stadi/benito-villamarin.jpg"
+    "foto": "/api/img?id=13292776908927c2"
   },
   {
     "id": "san-mames",
@@ -1289,7 +1289,7 @@
     "squadre": [
       "Athletic Bilbao"
     ],
-    "foto": "/stadi/san-mames.jpg"
+    "foto": "/api/img?id=6ff89bc6cda01552"
   },
   {
     "id": "estadio-mestalla",
@@ -1302,7 +1302,7 @@
     "squadre": [
       "Valencia CF"
     ],
-    "foto": "/stadi/estadio-mestalla.jpg"
+    "foto": "/api/img?id=cebafb06645bb007"
   },
   {
     "id": "ramon-sanchez-pizjuan",
@@ -1315,7 +1315,7 @@
     "squadre": [
       "Sevilla FC"
     ],
-    "foto": "/stadi/ramon-sanchez-pizjuan.jpg"
+    "foto": "/api/img?id=53286172c43a8b09"
   },
   {
     "id": "reale-arena",
@@ -1328,7 +1328,7 @@
     "squadre": [
       "Real Sociedad"
     ],
-    "foto": "/stadi/reale-arena.jpg"
+    "foto": "/api/img?id=a718bdb842aa8fea"
   },
   {
     "id": "balaidos",
@@ -1341,7 +1341,7 @@
     "squadre": [
       "Celta Vigo"
     ],
-    "foto": "/stadi/balaidos.jpg"
+    "foto": "/api/img?id=28c3572e25f9c456"
   },
   {
     "id": "el-sadar",
@@ -1354,7 +1354,7 @@
     "squadre": [
       "CA Osasuna"
     ],
-    "foto": "/stadi/el-sadar.jpg"
+    "foto": "/api/img?id=1fa07f7ea0110d1c"
   },
   {
     "id": "coliseum-getafe",
@@ -1367,7 +1367,7 @@
     "squadre": [
       "Getafe CF"
     ],
-    "foto": "/stadi/coliseum-getafe.jpg"
+    "foto": "/api/img?id=e6feb5ab3710ed41"
   },
   {
     "id": "estadio-de-vallecas",
@@ -1380,7 +1380,7 @@
     "squadre": [
       "Rayo Vallecano"
     ],
-    "foto": "/stadi/estadio-de-vallecas.jpg"
+    "foto": "/api/img?id=fe92ff93428ab9de"
   },
   {
     "id": "estadi-montilivi",
@@ -1393,7 +1393,7 @@
     "squadre": [
       "Girona FC"
     ],
-    "foto": "/stadi/estadi-montilivi.jpg"
+    "foto": "/api/img?id=834972767d52672a"
   },
   {
     "id": "mendizorrotza",
@@ -1406,7 +1406,7 @@
     "squadre": [
       "Deportivo Alavés"
     ],
-    "foto": "/stadi/mendizorrotza.jpg"
+    "foto": "/api/img?id=ae0fd2d5018c2d06"
   },
   {
     "id": "estadio-gran-canaria",
@@ -1419,7 +1419,7 @@
     "squadre": [
       "UD Las Palmas"
     ],
-    "foto": "/stadi/estadio-gran-canaria.jpg"
+    "foto": "/api/img?id=710e7523bb55c339"
   },
   {
     "id": "signal-iduna-park",
@@ -1432,7 +1432,7 @@
     "squadre": [
       "Borussia Dortmund"
     ],
-    "foto": "/stadi/signal-iduna-park.jpg"
+    "foto": "/api/img?id=05556a9df149ac62"
   },
   {
     "id": "olympiastadion-berlin",
@@ -1445,7 +1445,7 @@
     "squadre": [
       "Hertha BSC"
     ],
-    "foto": "/stadi/olympiastadion-berlin.jpg"
+    "foto": "/api/img?id=b53e346f158fe3a8"
   },
   {
     "id": "veltins-arena",
@@ -1458,7 +1458,7 @@
     "squadre": [
       "Schalke 04"
     ],
-    "foto": "/stadi/veltins-arena.jpg"
+    "foto": "/api/img?id=a8707e2a5cda8dfa"
   },
   {
     "id": "deutsche-bank-park",
@@ -1471,7 +1471,7 @@
     "squadre": [
       "Eintracht Frankfurt"
     ],
-    "foto": "/stadi/deutsche-bank-park.jpg"
+    "foto": "/api/img?id=66c7d328d711401a"
   },
   {
     "id": "red-bull-arena-leipzig",
@@ -1484,7 +1484,7 @@
     "squadre": [
       "RB Leipzig"
     ],
-    "foto": "/stadi/red-bull-arena-leipzig.jpg"
+    "foto": "/api/img?id=6bf325baa612be6a"
   },
   {
     "id": "wwk-arena",
@@ -1497,7 +1497,7 @@
     "squadre": [
       "FC Augsburg"
     ],
-    "foto": "/stadi/wwk-arena.jpg"
+    "foto": "/api/img?id=0f07c2de83f6efaf"
   },
   {
     "id": "prezero-arena",
@@ -1510,7 +1510,7 @@
     "squadre": [
       "TSG Hoffenheim"
     ],
-    "foto": "/stadi/prezero-arena.jpg"
+    "foto": "/api/img?id=db24d36a88420d68"
   },
   {
     "id": "millerntor-stadion",
@@ -1523,7 +1523,7 @@
     "squadre": [
       "FC St. Pauli"
     ],
-    "foto": "/stadi/millerntor-stadion.jpg"
+    "foto": "/api/img?id=dbafbdc664f9d846"
   },
   {
     "id": "stade-velodrome",
@@ -1536,7 +1536,7 @@
     "squadre": [
       "Olympique Marseille"
     ],
-    "foto": "/stadi/stade-velodrome.jpg"
+    "foto": "/api/img?id=65e0b220288903a2"
   },
   {
     "id": "stadium-de-toulouse",
@@ -1549,7 +1549,7 @@
     "squadre": [
       "Toulouse FC"
     ],
-    "foto": "/stadi/stadium-de-toulouse.jpg"
+    "foto": "/api/img?id=bcb7e4f3089eb160"
   },
   {
     "id": "matmut-atlantique",
@@ -1562,7 +1562,7 @@
     "squadre": [
       "Girondins de Bordeaux"
     ],
-    "foto": "/stadi/matmut-atlantique.jpg"
+    "foto": "/api/img?id=dc7909fffe87eaf5"
   },
   {
     "id": "stade-saint-symphorien",
@@ -1575,6 +1575,6 @@
     "squadre": [
       "FC Metz"
     ],
-    "foto": "/stadi/stade-saint-symphorien.jpg"
+    "foto": "/api/img?id=471d8e4062c01d2c"
   }
 ]
