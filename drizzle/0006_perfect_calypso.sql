@@ -1,0 +1,1 @@
+ALTER TABLE `matchmakingQueue` ADD `competition` varchar(50) NOT NULL;

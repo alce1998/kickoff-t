@@ -1,0 +1,166 @@
+[
+  {
+    "id": "napoli-milan-1988",
+    "date": "01/05/1988",
+    "competition": "Serie A 1987-88",
+    "homeTeam": "Napoli",
+    "awayTeam": "Milan",
+    "score": "2-3",
+    "description": "La partita che decise lo scudetto del Milan di Sacchi al San Paolo.",
+    "homeFormation": {
+      "module": "4-3-1-2",
+      "players": [
+        { "role": "GK", "name": "Garella", "correct": true },
+        { "role": "RB", "name": "Bruscolotti", "correct": true },
+        { "role": "CB", "name": "Ferrara", "correct": true },
+        { "role": "CB", "name": "Renica", "correct": true },
+        { "role": "LB", "name": "Francini", "correct": true },
+        { "role": "CM", "name": "De Napoli", "correct": true },
+        { "role": "CM", "name": "Bagni", "correct": true },
+        { "role": "CM", "name": "Romano", "correct": true },
+        { "role": "AM", "name": "Maradona", "correct": true },
+        { "role": "ST", "name": "Careca", "correct": true },
+        { "role": "ST", "name": "Bigliardi", "correct": true }
+      ]
+    },
+    "awayFormation": {
+      "module": "4-4-2",
+      "players": [
+        { "role": "GK", "name": "G. Galli", "correct": true },
+        { "role": "RB", "name": "Tassotti", "correct": true },
+        { "role": "CB", "name": "F. Galli", "correct": true },
+        { "role": "CB", "name": "Baresi", "correct": true },
+        { "role": "LB", "name": "Maldini", "correct": true },
+        { "role": "RM", "name": "Colombo", "correct": true },
+        { "role": "CM", "name": "Ancelotti", "correct": true },
+        { "role": "CM", "name": "Donadoni", "correct": true },
+        { "role": "LM", "name": "Evani", "correct": true },
+        { "role": "ST", "name": "Gullit", "correct": true },
+        { "role": "ST", "name": "Virdis", "correct": true }
+      ]
+    }
+  },
+  {
+    "id": "juventus-inter-1998",
+    "date": "26/04/1998",
+    "competition": "Serie A 1997-98",
+    "homeTeam": "Juventus",
+    "awayTeam": "Inter",
+    "score": "1-0",
+    "description": "Il derby d'Italia delle polemiche, deciso dal gol di Del Piero.",
+    "homeFormation": {
+      "module": "3-4-1-2",
+      "players": [
+        { "role": "GK", "name": "Peruzzi", "correct": true },
+        { "role": "CB", "name": "Torricelli", "correct": true },
+        { "role": "CB", "name": "Iuliano", "correct": true },
+        { "role": "CB", "name": "Montero", "correct": true },
+        { "role": "RWB", "name": "Di Livio", "correct": true },
+        { "role": "CM", "name": "Deschamps", "correct": true },
+        { "role": "CM", "name": "Davids", "correct": true },
+        { "role": "LWB", "name": "Pessotto", "correct": true },
+        { "role": "AM", "name": "Zidane", "correct": true },
+        { "role": "ST", "name": "Del Piero", "correct": true },
+        { "role": "ST", "name": "Inzaghi", "correct": true }
+      ]
+    },
+    "awayFormation": {
+      "module": "3-4-1-2",
+      "players": [
+        { "role": "GK", "name": "Pagliuca", "correct": true },
+        { "role": "CB", "name": "Fresi", "correct": true },
+        { "role": "CB", "name": "Colonnese", "correct": true },
+        { "role": "CB", "name": "West", "correct": true },
+        { "role": "RWB", "name": "J. Zanetti", "correct": true },
+        { "role": "CM", "name": "Winter", "correct": true },
+        { "role": "CM", "name": "Simeone", "correct": true },
+        { "role": "LWB", "name": "Cauet", "correct": true },
+        { "role": "AM", "name": "Djorkaeff", "correct": true },
+        { "role": "ST", "name": "Ronaldo", "correct": true },
+        { "role": "ST", "name": "Zamorano", "correct": true }
+      ]
+    }
+  },
+  {
+    "id": "lazio-roma-2002",
+    "date": "10/03/2002",
+    "competition": "Serie A 2001-02",
+    "homeTeam": "Lazio",
+    "awayTeam": "Roma",
+    "score": "1-5",
+    "description": "Il derby del poker di Montella e del cucchiaio di Totti.",
+    "homeFormation": {
+      "module": "3-5-2",
+      "players": [
+        { "role": "GK", "name": "Peruzzi", "correct": true },
+        { "role": "CB", "name": "Nesta", "correct": true },
+        { "role": "CB", "name": "Mihajlovic", "correct": true },
+        { "role": "CB", "name": "Couto", "correct": true },
+        { "role": "RWB", "name": "Pancaro", "correct": true },
+        { "role": "CM", "name": "Fiore", "correct": true },
+        { "role": "CM", "name": "Giannichedda", "correct": true },
+        { "role": "CM", "name": "Stankovic", "correct": true },
+        { "role": "LWB", "name": "D. Baggio", "correct": true },
+        { "role": "ST", "name": "Crespo", "correct": true },
+        { "role": "ST", "name": "S. Inzaghi", "correct": true }
+      ]
+    },
+    "awayFormation": {
+      "module": "3-4-1-2",
+      "players": [
+        { "role": "GK", "name": "Antonioli", "correct": true },
+        { "role": "CB", "name": "Zebina", "correct": true },
+        { "role": "CB", "name": "Samuel", "correct": true },
+        { "role": "CB", "name": "Panucci", "correct": true },
+        { "role": "RWB", "name": "Cafu", "correct": true },
+        { "role": "CM", "name": "Lima", "correct": true },
+        { "role": "CM", "name": "Emerson", "correct": true },
+        { "role": "LWB", "name": "Candela", "correct": true },
+        { "role": "AM", "name": "Totti", "correct": true },
+        { "role": "ST", "name": "Montella", "correct": true },
+        { "role": "ST", "name": "Delvecchio", "correct": true }
+      ]
+    }
+  },
+  {
+    "id": "milan-inter-2005",
+    "date": "06/04/2005",
+    "competition": "Champions League 2004-05",
+    "homeTeam": "Milan",
+    "awayTeam": "Inter",
+    "score": "2-0",
+    "description": "L'Euroderby di andata, dominato dai rossoneri con Stam e Shevchenko.",
+    "homeFormation": {
+      "module": "4-3-1-2",
+      "players": [
+        { "role": "GK", "name": "Dida", "correct": true },
+        { "role": "RB", "name": "Cafu", "correct": true },
+        { "role": "CB", "name": "Stam", "correct": true },
+        { "role": "CB", "name": "Nesta", "correct": true },
+        { "role": "LB", "name": "Maldini", "correct": true },
+        { "role": "CM", "name": "Gattuso", "correct": true },
+        { "role": "CM", "name": "Pirlo", "correct": true },
+        { "role": "CM", "name": "Seedorf", "correct": true },
+        { "role": "AM", "name": "Kakà", "correct": true },
+        { "role": "ST", "name": "Shevchenko", "correct": true },
+        { "role": "ST", "name": "Crespo", "correct": true }
+      ]
+    },
+    "awayFormation": {
+      "module": "4-4-2",
+      "players": [
+        { "role": "GK", "name": "Toldo", "correct": true },
+        { "role": "RB", "name": "J. Zanetti", "correct": true },
+        { "role": "CB", "name": "Cordoba", "correct": true },
+        { "role": "CB", "name": "Mihajlovic", "correct": true },
+        { "role": "LB", "name": "Favalli", "correct": true },
+        { "role": "RM", "name": "C. Zanetti", "correct": true },
+        { "role": "CM", "name": "Veron", "correct": true },
+        { "role": "CM", "name": "Cambiasso", "correct": true },
+        { "role": "LM", "name": "Stankovic", "correct": true },
+        { "role": "ST", "name": "Cruz", "correct": true },
+        { "role": "ST", "name": "Martins", "correct": true }
+      ]
+    }
+  }
+]

@@ -1,0 +1,568 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Chakra Petch", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-xl: 8px;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Retro Futbolismo Theme */
+:root {
+  /* Gazzetta Pinkish Paper Base */
+  --background: oklch(0.94 0.03 10.5); 
+  /* Ink Black */
+  --foreground: oklch(0.2 0.02 264);
+  
+  /* Card Background - Slightly lighter paper */
+  --card: oklch(0.97 0.02 10.5);
+  --card-foreground: oklch(0.2 0.02 264);
+  
+  --popover: oklch(0.97 0.02 10.5);
+  --popover-foreground: oklch(0.2 0.02 264);
+  
+  /* Retro Pink/Red (Gazzetta Accent) */
+  --primary: oklch(0.65 0.22 15);
+  --primary-foreground: oklch(0.98 0 0);
+  
+  /* Faded Blue (Vintage Jersey) */
+  --secondary: oklch(0.7 0.15 240);
+  --secondary-foreground: oklch(0.98 0 0);
+  
+  /* Muted Paper Tone */
+  --muted: oklch(0.9 0.02 10.5);
+  --muted-foreground: oklch(0.45 0.02 264);
+  
+  /* Highlight Yellow */
+  --accent: oklch(0.95 0.18 95);
+  --accent-foreground: oklch(0.2 0.02 264);
+  
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  
+  /* Ink Border */
+  --border: oklch(0.2 0.02 264);
+  --input: oklch(0.2 0.02 264);
+  --ring: oklch(0.65 0.22 15);
+  
+  --radius: 0px; /* Sharp edges for retro feel */
+  
+  /* Chart Colors - Retro Palette */
+  --chart-1: oklch(0.65 0.22 15); /* Pink/Red */
+  --chart-2: oklch(0.7 0.15 240); /* Blue */
+  --chart-3: oklch(0.85 0.15 85); /* Yellow/Orange */
+  --chart-4: oklch(0.5 0.15 145); /* Green */
+  --chart-5: oklch(0.4 0.05 264); /* Dark Grey */
+  
+  --sidebar: oklch(0.92 0.03 10.5);
+  --sidebar-foreground: oklch(0.2 0.02 264);
+  --sidebar-primary: oklch(0.65 0.22 15);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.95 0.18 95);
+  --sidebar-accent-foreground: oklch(0.2 0.02 264);
+  --sidebar-border: oklch(0.2 0.02 264);
+  --sidebar-ring: oklch(0.65 0.22 15);
+}
+
+.dark {
+  /* Dark Mode - Night Match / Inverted Print */
+  --background: oklch(0.15 0.02 264);
+  --foreground: oklch(0.94 0.03 10.5);
+  
+  --card: oklch(0.2 0.02 264);
+  --card-foreground: oklch(0.94 0.03 10.5);
+  
+  --popover: oklch(0.2 0.02 264);
+  --popover-foreground: oklch(0.94 0.03 10.5);
+  
+  --primary: oklch(0.65 0.22 15);
+  --primary-foreground: oklch(0.98 0 0);
+  
+  --secondary: oklch(0.7 0.15 240);
+  --secondary-foreground: oklch(0.98 0 0);
+  
+  --muted: oklch(0.25 0.02 264);
+  --muted-foreground: oklch(0.7 0.02 264);
+  
+  --accent: oklch(0.3 0.05 264);
+  --accent-foreground: oklch(0.94 0.03 10.5);
+  
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  
+  --border: oklch(0.94 0.03 10.5);
+  --input: oklch(0.94 0.03 10.5);
+  --ring: oklch(0.65 0.22 15);
+  
+  --sidebar: oklch(0.12 0.02 264);
+  --sidebar-foreground: oklch(0.94 0.03 10.5);
+  --sidebar-primary: oklch(0.65 0.22 15);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.3 0.05 264);
+  --sidebar-accent-foreground: oklch(0.94 0.03 10.5);
+  --sidebar-border: oklch(0.94 0.03 10.5);
+  --sidebar-ring: oklch(0.65 0.22 15);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}
+
+/* ============================================
+   MODERN DARK THEME - Football Analytics Style
+   ============================================ */
+.modern {
+  /* Deep space background */
+  --background: oklch(0.08 0.015 264);
+  /* Bright white text */
+  --foreground: oklch(0.95 0.005 264);
+  
+  /* Card - slightly lighter than bg, glassmorphism */
+  --card: oklch(0.12 0.02 264);
+  --card-foreground: oklch(0.95 0.005 264);
+  
+  --popover: oklch(0.12 0.02 264);
+  --popover-foreground: oklch(0.95 0.005 264);
+  
+  /* Neon green accent - primary action */
+  --primary: oklch(0.75 0.2 145);
+  --primary-foreground: oklch(0.08 0.015 264);
+  
+  /* Cyan secondary */
+  --secondary: oklch(0.65 0.18 200);
+  --secondary-foreground: oklch(0.08 0.015 264);
+  
+  /* Muted dark surface */
+  --muted: oklch(0.16 0.02 264);
+  --muted-foreground: oklch(0.6 0.01 264);
+  
+  /* Electric blue accent */
+  --accent: oklch(0.55 0.22 250);
+  --accent-foreground: oklch(0.95 0.005 264);
+  
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.95 0.005 264);
+  
+  /* Subtle glowing border */
+  --border: oklch(0.25 0.03 264);
+  --input: oklch(0.25 0.03 264);
+  --ring: oklch(0.75 0.2 145);
+  
+  --radius: 8px;
+  
+  /* Chart colors - neon palette */
+  --chart-1: oklch(0.75 0.2 145);  /* Neon green */
+  --chart-2: oklch(0.65 0.18 200); /* Cyan */
+  --chart-3: oklch(0.7 0.2 60);    /* Amber */
+  --chart-4: oklch(0.6 0.22 300);  /* Purple */
+  --chart-5: oklch(0.65 0.22 25);  /* Red */
+  
+  --sidebar: oklch(0.1 0.015 264);
+  --sidebar-foreground: oklch(0.95 0.005 264);
+  --sidebar-primary: oklch(0.75 0.2 145);
+  --sidebar-primary-foreground: oklch(0.08 0.015 264);
+  --sidebar-accent: oklch(0.55 0.22 250);
+  --sidebar-accent-foreground: oklch(0.95 0.005 264);
+  --sidebar-border: oklch(0.25 0.03 264);
+  --sidebar-ring: oklch(0.75 0.2 145);
+}
+
+/* Modern theme typography override */
+.modern body {
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: oklch(0.08 0.015 264);
+  color: oklch(0.95 0.005 264);
+}
+
+/* Modern theme utility classes */
+.modern .retro-card {
+  background: oklch(0.12 0.02 264);
+  border: 1px solid oklch(0.25 0.03 264);
+  border-radius: 12px;
+  box-shadow: 0 0 20px oklch(0.75 0.2 145 / 0.05);
+}
+
+.modern .retro-border {
+  border: 1px solid oklch(0.25 0.03 264) !important;
+  box-shadow: none !important;
+}
+
+/* Neon glow effect for modern theme */
+.modern .neon-glow {
+  box-shadow: 0 0 20px oklch(0.75 0.2 145 / 0.3), 0 0 40px oklch(0.75 0.2 145 / 0.1);
+}
+
+/* Shake animation for wrong answers */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s ease-out;
+}
+
+/* ============================================
+   MODERN THEME - Global overrides
+   Sovrascrive automaticamente le classi retrò
+   in tutte le pagine senza modificarle
+   ============================================ */
+
+/* bg-white → dark card surface */
+.modern .bg-white {
+  background-color: oklch(0.12 0.02 264) !important;
+  color: oklch(0.95 0.005 264) !important;
+}
+
+/* bg-gray-50, bg-gray-100 → slightly lighter dark */
+.modern .bg-gray-50,
+.modern .bg-gray-100 {
+  background-color: oklch(0.14 0.02 264) !important;
+}
+
+/* bg-gray-200 → border-level dark */
+.modern .bg-gray-200 {
+  background-color: oklch(0.18 0.02 264) !important;
+}
+
+/* Retro hard borders → subtle dark borders */
+.modern .border-4.border-black,
+.modern .border-2.border-black,
+.modern .border-black {
+  border-color: oklch(0.3 0.03 264) !important;
+  border-width: 1px !important;
+}
+
+/* Retro hard shadows → subtle glow */
+.modern [class*="shadow-[8px_8px"],
+.modern [class*="shadow-[4px_4px"],
+.modern [class*="shadow-[6px_6px"],
+.modern [class*="shadow-[12px_12px"] {
+  box-shadow: 0 4px 24px oklch(0 0 0 / 0.4) !important;
+}
+
+/* font-display → Inter in modern */
+.modern .font-display {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  letter-spacing: -0.02em;
+}
+
+/* Retro pink primary buttons → neon green in modern */
+.modern .bg-pink-600,
+.modern .bg-pink-500 {
+  background-color: oklch(0.75 0.2 145) !important;
+  color: oklch(0.08 0.015 264) !important;
+}
+.modern .hover\:bg-pink-700:hover,
+.modern .hover\:bg-pink-600:hover {
+  background-color: oklch(0.68 0.2 145) !important;
+}
+
+/* Retro yellow accent → cyan in modern */
+.modern .bg-yellow-400,
+.modern .bg-yellow-300 {
+  background-color: oklch(0.65 0.18 200) !important;
+  color: oklch(0.08 0.015 264) !important;
+}
+
+/* text-black → foreground in modern */
+.modern .text-black {
+  color: oklch(0.95 0.005 264) !important;
+}
+
+/* text-gray-700, text-gray-800 → light gray in modern */
+.modern .text-gray-700,
+.modern .text-gray-800,
+.modern .text-gray-900 {
+  color: oklch(0.85 0.005 264) !important;
+}
+
+/* text-gray-500, text-gray-600 → muted in modern */
+.modern .text-gray-500,
+.modern .text-gray-600 {
+  color: oklch(0.6 0.01 264) !important;
+}
+
+/* Input fields in modern */
+.modern input[type="text"],
+.modern input[type="email"],
+.modern input[type="password"],
+.modern textarea,
+.modern select {
+  background-color: oklch(0.14 0.02 264) !important;
+  border-color: oklch(0.3 0.03 264) !important;
+  color: oklch(0.95 0.005 264) !important;
+}
+
+/* Rounded corners for all cards in modern */
+.modern .rounded-none {
+  border-radius: 12px !important;
+}
+
+/* Modern scrollbar */
+.modern ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.modern ::-webkit-scrollbar-track {
+  background: oklch(0.1 0.015 264);
+}
+.modern ::-webkit-scrollbar-thumb {
+  background: oklch(0.3 0.03 264);
+  border-radius: 3px;
+}
+.modern ::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.75 0.2 145 / 0.6);
+}
+
+/* NavigationBar in modern */
+.modern nav,
+.modern header {
+  background-color: oklch(0.09 0.015 264 / 0.95) !important;
+  border-bottom-color: oklch(0.2 0.02 264) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Badge/pill overrides */
+.modern .bg-green-100 { background-color: oklch(0.75 0.2 145 / 0.15) !important; }
+.modern .text-green-800 { color: oklch(0.75 0.2 145) !important; }
+.modern .bg-blue-100 { background-color: oklch(0.65 0.18 200 / 0.15) !important; }
+.modern .text-blue-800 { color: oklch(0.65 0.18 200) !important; }
+.modern .bg-red-100 { background-color: oklch(0.65 0.22 25 / 0.15) !important; }
+.modern .text-red-800 { color: oklch(0.65 0.22 25) !important; }
+.modern .bg-yellow-100 { background-color: oklch(0.7 0.2 60 / 0.15) !important; }
+.modern .text-yellow-800 { color: oklch(0.7 0.2 60) !important; }
+
+/* Campo da calcio in modern - mantieni verde */
+.modern .bg-green-600,
+.modern .bg-green-700,
+.modern .bg-green-800 {
+  /* Mantieni il verde del campo */
+}
+
+/* Bottoni outline in modern */
+.modern button[class*="border-black"],
+.modern button[class*="border-gray-800"] {
+  border-color: oklch(0.3 0.03 264) !important;
+  color: oklch(0.95 0.005 264) !important;
+}
+.modern button[class*="border-black"]:hover {
+  background-color: oklch(0.18 0.02 264) !important;
+}
+
+/* ─── Specific page background overrides ─── */
+
+/* Profilo, ConfermaUsername: bg-[#fce4ec] → dark */
+.modern [class*="bg-\\[\\#fce4ec\\]"] {
+  background-color: oklch(0.12 0.02 264) !important;
+}
+
+/* DreamTeamMultiplayer, DreamTeamGame: bg-[#FFF5F5] → dark */
+.modern [class*="bg-\\[\\#FFF5F5\\]"],
+.modern [class*="bg-\\[\\#fff5f5\\]"] {
+  background-color: oklch(0.08 0.015 264) !important;
+}
+
+/* WorldCupGame already dark, keep as-is */
+
+/* Game.tsx, CarriereGame.tsx: bg-green-800 campo → keep */
+.modern .bg-green-800 {
+  /* Campo da calcio — mantieni verde */
+  background-color: #166534 !important;
+}
+
+/* pink-100 row headers in tables → dark */
+.modern .bg-pink-100 {
+  background-color: oklch(0.75 0.2 145 / 0.12) !important;
+  color: oklch(0.85 0.005 264) !important;
+}
+
+/* yellow-100 → dark amber */
+.modern .bg-yellow-100 {
+  background-color: oklch(0.7 0.2 60 / 0.12) !important;
+}
+
+/* Gradient pink buttons → neon green */
+.modern .from-pink-500,
+.modern .from-pink-600 {
+  --tw-gradient-from: oklch(0.75 0.2 145) !important;
+}
+.modern .to-rose-500,
+.modern .to-rose-600 {
+  --tw-gradient-to: oklch(0.65 0.18 200) !important;
+}
+.modern .hover\:from-pink-600:hover {
+  --tw-gradient-from: oklch(0.68 0.2 145) !important;
+}
+.modern .hover\:to-rose-600:hover {
+  --tw-gradient-to: oklch(0.58 0.18 200) !important;
+}
+
+/* bg-primary text-primary-foreground → neon green in modern */
+.modern .bg-primary {
+  background-color: oklch(0.75 0.2 145) !important;
+  color: oklch(0.08 0.015 264) !important;
+}
+.modern .text-primary-foreground {
+  color: oklch(0.08 0.015 264) !important;
+}
+
+/* text-pink-600, text-pink-500 → green in modern */
+.modern .text-pink-600,
+.modern .text-pink-500 {
+  color: oklch(0.75 0.2 145) !important;
+}
+
+/* border-pink-600, border-pink-500 → green in modern */
+.modern .border-pink-600,
+.modern .border-pink-500 {
+  border-color: oklch(0.75 0.2 145) !important;
+}
+
+/* hover:bg-pink-50 → dark hover */
+.modern .hover\:bg-pink-50:hover {
+  background-color: oklch(0.75 0.2 145 / 0.1) !important;
+}
+.modern .hover\:bg-pink-100:hover {
+  background-color: oklch(0.75 0.2 145 / 0.15) !important;
+}
+
+/* bg-pink-50 → very subtle green tint */
+.modern .bg-pink-50 {
+  background-color: oklch(0.75 0.2 145 / 0.08) !important;
+}
+
+/* Table borders */
+.modern table,
+.modern th,
+.modern td {
+  border-color: oklch(0.25 0.03 264) !important;
+}
+.modern th {
+  background-color: oklch(0.14 0.02 264) !important;
+  color: oklch(0.85 0.005 264) !important;
+}
+.modern tr:hover {
+  background-color: oklch(0.15 0.02 264) !important;
+}

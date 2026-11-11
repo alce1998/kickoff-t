@@ -1,0 +1,1 @@
+ALTER TABLE `userStats` MODIFY COLUMN `gamesPlayedSet` text NOT NULL;

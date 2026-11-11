@@ -1,0 +1,1196 @@
+[
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "CAGLIARI",
+    "awayTeam": "FIORENTINA"
+  },
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "COMO",
+    "awayTeam": "LAZIO"
+  },
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "GENOA",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "INTER",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "MILAN",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "ROMA",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 1,
+    "date": "2025-08-24",
+    "homeTeam": "UDINESE",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "BOLOGNA",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "CREMONESE",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "GENOA",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "INTER",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "LAZIO",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "LECCE",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "NAPOLI",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "PARMA",
+    "awayTeam": "ATALANTA"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "PISA",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 2,
+    "date": "2025-08-31",
+    "homeTeam": "TORINO",
+    "awayTeam": "FIORENTINA"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "CAGLIARI",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "COMO",
+    "awayTeam": "GENOA"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "INTER"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "MILAN",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "PISA",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "ROMA",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "LAZIO"
+  },
+  {
+    "giornata": 3,
+    "date": "2025-09-14",
+    "homeTeam": "VERONA",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "BOLOGNA",
+    "awayTeam": "GENOA"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "CREMONESE",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "INTER",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "LAZIO",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "LECCE",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "NAPOLI",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "TORINO",
+    "awayTeam": "ATALANTA"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "UDINESE",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 4,
+    "date": "2025-09-21",
+    "homeTeam": "VERONA",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "CAGLIARI",
+    "awayTeam": "INTER"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "COMO",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "GENOA",
+    "awayTeam": "LAZIO"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "ATALANTA"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "LECCE",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "MILAN",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "PARMA",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "PISA",
+    "awayTeam": "FIORENTINA"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "ROMA",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 5,
+    "date": "2025-09-28",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "BOLOGNA",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "INTER",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "LAZIO",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "NAPOLI",
+    "awayTeam": "GENOA"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "PARMA",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "UDINESE",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 6,
+    "date": "2025-10-05",
+    "homeTeam": "VERONA",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "LAZIO"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "CAGLIARI",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "COMO",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "CREMONESE",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "GENOA",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "LECCE",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "MILAN",
+    "awayTeam": "FIORENTINA"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "PISA",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "ROMA",
+    "awayTeam": "INTER"
+  },
+  {
+    "giornata": 7,
+    "date": "2025-10-19",
+    "homeTeam": "TORINO",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "CREMONESE",
+    "awayTeam": "ATALANTA"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "LAZIO",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "MILAN",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "NAPOLI",
+    "awayTeam": "INTER"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "PARMA",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "TORINO",
+    "awayTeam": "GENOA"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "UDINESE",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 8,
+    "date": "2025-10-26",
+    "homeTeam": "VERONA",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "BOLOGNA",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "CAGLIARI",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "COMO",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "GENOA",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "INTER",
+    "awayTeam": "FIORENTINA"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "LECCE",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "PISA",
+    "awayTeam": "LAZIO"
+  },
+  {
+    "giornata": 9,
+    "date": "2025-10-29",
+    "homeTeam": "ROMA",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "CREMONESE",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "LAZIO",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "MILAN",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "NAPOLI",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "PARMA",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "GENOA"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "TORINO",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "UDINESE",
+    "awayTeam": "ATALANTA"
+  },
+  {
+    "giornata": 10,
+    "date": "2025-11-02",
+    "homeTeam": "VERONA",
+    "awayTeam": "INTER"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "BOLOGNA",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "COMO",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "GENOA",
+    "awayTeam": "FIORENTINA"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "INTER",
+    "awayTeam": "LAZIO"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "LECCE",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "PARMA",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "PISA",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 11,
+    "date": "2025-11-09",
+    "homeTeam": "ROMA",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "CAGLIARI",
+    "awayTeam": "GENOA"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "CREMONESE",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "INTER",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "LAZIO",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "NAPOLI",
+    "awayTeam": "ATALANTA"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "TORINO",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "UDINESE",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 12,
+    "date": "2025-11-23",
+    "homeTeam": "VERONA",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "FIORENTINA"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "BOLOGNA",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "COMO",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "GENOA",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "LECCE",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "MILAN",
+    "awayTeam": "LAZIO"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "PARMA",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "PISA",
+    "awayTeam": "INTER"
+  },
+  {
+    "giornata": 13,
+    "date": "2025-11-30",
+    "homeTeam": "ROMA",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "CAGLIARI",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "CREMONESE",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "INTER",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "LAZIO",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "NAPOLI",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "PISA",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "FIORENTINA"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "TORINO",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "UDINESE",
+    "awayTeam": "GENOA"
+  },
+  {
+    "giornata": 14,
+    "date": "2025-12-07",
+    "homeTeam": "VERONA",
+    "awayTeam": "ATALANTA"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "BOLOGNA",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "GENOA",
+    "awayTeam": "INTER"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "LECCE",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "MILAN",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "PARMA",
+    "awayTeam": "LAZIO"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "ROMA",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "TORINO",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 15,
+    "date": "2025-12-14",
+    "homeTeam": "UDINESE",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "CAGLIARI",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "COMO",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "GENOA",
+    "awayTeam": "ATALANTA"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "INTER",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "LAZIO",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "NAPOLI",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 16,
+    "date": "2025-12-21",
+    "homeTeam": "VERONA",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "INTER"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "BOLOGNA",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "CREMONESE",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "LECCE",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "MILAN",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "PARMA",
+    "awayTeam": "FIORENTINA"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "PISA",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "ROMA",
+    "awayTeam": "GENOA"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "TORINO",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 17,
+    "date": "2025-12-28",
+    "homeTeam": "UDINESE",
+    "awayTeam": "LAZIO"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "CAGLIARI",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "COMO",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "GENOA",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "INTER",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "LECCE"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "LAZIO",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 18,
+    "date": "2026-01-03",
+    "homeTeam": "VERONA",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 19,
+    "date": "2026-01-06",
+    "homeTeam": "BOLOGNA",
+    "awayTeam": "ATALANTA"
+  },
+  {
+    "giornata": 19,
+    "date": "2026-01-06",
+    "homeTeam": "CREMONESE",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 19,
+    "date": "2026-01-06",
+    "homeTeam": "LECCE",
+    "awayTeam": "ROMA"
+  },
+  {
+    "giornata": 19,
+    "date": "2026-01-06",
+    "homeTeam": "MILAN",
+    "awayTeam": "GENOA"
+  },
+  {
+    "giornata": 19,
+    "date": "2026-01-06",
+    "homeTeam": "NAPOLI",
+    "awayTeam": "VERONA"
+  },
+  {
+    "giornata": 19,
+    "date": "2026-01-06",
+    "homeTeam": "PARMA",
+    "awayTeam": "INTER"
+  },
+  {
+    "giornata": 19,
+    "date": "2026-01-06",
+    "homeTeam": "PISA",
+    "awayTeam": "COMO"
+  },
+  {
+    "giornata": 19,
+    "date": "2026-01-06",
+    "homeTeam": "SASSUOLO",
+    "awayTeam": "JUVENTUS"
+  },
+  {
+    "giornata": 19,
+    "date": "2026-01-06",
+    "homeTeam": "TORINO",
+    "awayTeam": "UDINESE"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "ATALANTA",
+    "awayTeam": "TORINO"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "COMO",
+    "awayTeam": "BOLOGNA"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "FIORENTINA",
+    "awayTeam": "MILAN"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "GENOA",
+    "awayTeam": "CAGLIARI"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "INTER",
+    "awayTeam": "NAPOLI"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "JUVENTUS",
+    "awayTeam": "CREMONESE"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "LECCE",
+    "awayTeam": "PARMA"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "ROMA",
+    "awayTeam": "SASSUOLO"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "UDINESE",
+    "awayTeam": "PISA"
+  },
+  {
+    "giornata": 20,
+    "date": "2026-01-11",
+    "homeTeam": "VERONA",
+    "awayTeam": "LAZIO"
+  }
+]

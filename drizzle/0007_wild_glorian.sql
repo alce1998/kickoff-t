@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `eloRating` int DEFAULT 1200 NOT NULL;

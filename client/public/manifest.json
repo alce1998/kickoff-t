@@ -1,0 +1,32 @@
+{
+  "name": "Calcio d'Inizio - Quiz Formazioni Serie A",
+  "short_name": "Calcio d'Inizio",
+  "description": "Il quiz sulle formazioni storiche della Serie A italiana. Metti alla prova la tua memoria calcistica indovinando i giocatori titolari delle partite dal 2000 ad oggi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fce7f3",
+  "theme_color": "#ec4899",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["sports", "games", "entertainment"],
+  "screenshots": [
+    {
+      "src": "/screenshot-1.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ]
+}
