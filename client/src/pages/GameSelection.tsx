@@ -130,17 +130,6 @@ export default function GameSelection() {
       <NavigationBar onFeedbackClick={() => setIsFeedbackOpen(true)} />
       <FeedbackModal isOpen={isFeedbackOpen} onClose={() => setIsFeedbackOpen(false)} />
       
-      {/* Pulsante Floating + per creare sfide */}
-      {user && (
-        <Button
-          onClick={() => setLocation('/formazioni?tab=online')}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold text-3xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center justify-center"
-          title={t('home.nuovaSfida')}
-        >
-          +
-        </Button>
-      )}
-      
       {/* Banner Partita Live in corso */}
       {user && activeLiveChallenge && (
         <div className="fixed top-14 left-0 right-0 z-40 bg-gradient-to-r from-orange-500 to-red-500 border-b-4 border-black shadow-[0px_4px_0px_0px_rgba(0,0,0,1)]">
