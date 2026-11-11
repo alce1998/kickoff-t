@@ -22,10 +22,10 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { CookieBanner } from "./components/CookieBanner";
 import { UsernameOnboardingModal } from "./components/UsernameOnboardingModal";
 import { FigurinePopup } from "./components/FigurinePopup";
+import { MatchGuardProvider } from "./contexts/MatchGuardContext";
 import ConfermaUsername from "@/pages/ConfermaUsername";
 import AaronsZurkowskiSetup from "@/pages/AaronsZurkowskiSetup";
 import AaronsZurkowskiGame from "@/pages/AaronsZurkowskiGame";
-import CartolinesAlbum from "@/pages/CartolinesAlbum";
 import CartolinesGame from "@/pages/CartolinesGame";
 import FootsterSetup from "@/pages/FootsterSetup";
 import FootsterGame from "@/pages/FootsterGame";
@@ -35,6 +35,17 @@ import Trofei from "@/pages/Trofei";
 import { useEffect, useState } from "react";
 import { useAuth } from "./_core/hooks/useAuth";
 import { trpc } from "./lib/trpc";
+
+function CartolineRedirect() {
+  const [, setLocation] = useLocation();
+  useEffect(() => {
+    setLocation("/");
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("open-figurine-popup", { detail: { section: "stadi" } }));
+    }, 50);
+  }, [setLocation]);
+  return null;
+}
 
 function Router() {
   const [location] = useLocation();
@@ -65,7 +76,7 @@ function Router() {
       <Route path={"/conferma-username/:token"} component={ConfermaUsername} />
       <Route path={"/aarons-zurkowski"} component={AaronsZurkowskiSetup} />
       <Route path={"/aarons-zurkowski/gioco"} component={AaronsZurkowskiGame} />
-      <Route path={"/cartoline"} component={CartolinesAlbum} />
+      <Route path={"/cartoline"} component={CartolineRedirect} />
       <Route path={"/cartoline/:id"} component={CartolinesGame} />
       <Route path={"/footster"} component={FootsterSetup} />
       <Route path={"/footster/game"} component={FootsterGame} />
@@ -137,12 +148,14 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider>
         <TooltipProvider>
-          <Toaster />
-          <CookieBanner />
-          <InstagramButton />
-          <FigurinePopup />
-          <UsernameGuard />
-          <Router />
+          <MatchGuardProvider>
+            <Toaster />
+            <CookieBanner />
+            <InstagramButton />
+            <FigurinePopup />
+            <UsernameGuard />
+            <Router />
+          </MatchGuardProvider>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

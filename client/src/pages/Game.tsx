@@ -16,6 +16,7 @@ import { FeedbackModal } from "@/components/FeedbackModal";
 import { useTranslation } from "react-i18next";
 import { useAchievements } from "@/hooks/useAchievements";
 import { useAuth } from "@/_core/hooks/useAuth";
+import { useMatchGuard } from "@/contexts/MatchGuardContext";
 
 // Helper per estrarre i giocatori dalla formazione (gestisce sia array diretto che oggetto con .players)
 const getFormationPlayers = (formation: any) => {
@@ -43,6 +44,7 @@ export default function Game() {
   const { t } = useTranslation();
   const { unlock } = useAchievements();
   const { isAuthenticated } = useAuth({});
+  const { setMatchActive, confirmExit } = useMatchGuard();
   const recordGamePlayed = trpc.achievements.recordGamePlayed.useMutation();
   const saveScore = trpc.gameScores.saveScore.useMutation();
   const [scoreSaved, setScoreSaved] = useState(false);
@@ -50,6 +52,10 @@ export default function Game() {
   const [gameState, setGameState] = useState<GameState>('setup');
   const [players, setPlayers] = useState<PlayerScore[]>([]);
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
+
+  useEffect(() => {
+    setMatchActive(gameState === 'playing');
+  }, [gameState, setMatchActive]);
 
   // Poliglotta: record that the user played this game
   useEffect(() => {
@@ -846,7 +852,7 @@ export default function Game() {
             Nuova Partita
           </Button>
           <Button 
-            onClick={() => setGameState('setup')} 
+            onClick={() => confirmExit(() => setGameState('setup'))} 
             size="lg" 
             className="font-display text-base sm:text-xl px-4 sm:px-8 py-4 sm:py-6 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all bg-white text-black hover:bg-gray-100 w-full sm:w-auto"
           >

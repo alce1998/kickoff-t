@@ -9,6 +9,7 @@ import { toast } from 'sonner';
 import { trpc } from '@/lib/trpc';
 import { useAuth } from '@/_core/hooks/useAuth';
 import { useAchievements } from '@/hooks/useAchievements';
+import { useMatchGuard } from '@/contexts/MatchGuardContext';
 
 // ─── Tipi ────────────────────────────────────────────────────────────────────
 
@@ -116,6 +117,12 @@ export default function AaronsZurkowskiGame() {
   const [gameOver, setGameOver] = useState(false);
   const [surrendered, setSurrendered] = useState(false);
   const [scores, setScores] = useState<Record<string, number>>({});
+  const { setMatchActive } = useMatchGuard();
+
+  useEffect(() => {
+    setMatchActive(!gameOver);
+    return () => setMatchActive(false);
+  }, [gameOver, setMatchActive]);
 
   const inputRef = useRef<HTMLInputElement>(null);
 

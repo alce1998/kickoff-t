@@ -3031,9 +3031,8 @@ Inviato automaticamente da La Grande Partita del Passato
       const db = await getDb();
       if (!db) throw new Error("Database not available");
       await db.execute(sql2.raw(`CREATE TABLE IF NOT EXISTS figurineProgress (id INT AUTO_INCREMENT PRIMARY KEY, userId INT NOT NULL, playerId VARCHAR(100) NOT NULL, solved INT NOT NULL DEFAULT 0, hintsUsed TEXT, solvedAt TIMESTAMP NULL, createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)`));
-      await db.execute(sql2.raw(`CREATE TABLE IF NOT EXISTS figurinePoints (id INT AUTO_INCREMENT PRIMARY KEY, userId INT NOT NULL UNIQUE, points INT NOT NULL DEFAULT 0, totalEarned INT NOT NULL DEFAULT 0, updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)`));
       const progress = await db.select().from(figurineProgress).where(eq3(figurineProgress.userId, ctx.user.id));
-      const pointsRow = await db.select().from(figurinePoints).where(eq3(figurinePoints.userId, ctx.user.id)).limit(1);
+      const pointsRow = await db.select().from(cartolinesPoints).where(eq3(cartolinesPoints.userId, ctx.user.id)).limit(1);
       return {
         progress,
         points: pointsRow[0]?.points ?? 0,
@@ -3063,14 +3062,14 @@ Inviato automaticamente da La Grande Partita del Passato
           solvedAt: /* @__PURE__ */ new Date()
         });
       }
-      const pointsRow = await db.select().from(figurinePoints).where(eq3(figurinePoints.userId, ctx.user.id)).limit(1);
+      const pointsRow = await db.select().from(cartolinesPoints).where(eq3(cartolinesPoints.userId, ctx.user.id)).limit(1);
       if (pointsRow.length > 0) {
-        await db.update(figurinePoints).set({
+        await db.update(cartolinesPoints).set({
           points: pointsRow[0].points + 1,
           totalEarned: pointsRow[0].totalEarned + 1
-        }).where(eq3(figurinePoints.userId, ctx.user.id));
+        }).where(eq3(cartolinesPoints.userId, ctx.user.id));
       } else {
-        await db.insert(figurinePoints).values({
+        await db.insert(cartolinesPoints).values({
           userId: ctx.user.id,
           points: 1,
           totalEarned: 1
@@ -3085,12 +3084,12 @@ Inviato automaticamente da La Grande Partita del Passato
       const db = await getDb();
       if (!db) throw new Error("Database not available");
       const cost = input.hintType === "iniziali" ? 3 : 1;
-      const pointsRow = await db.select().from(figurinePoints).where(eq3(figurinePoints.userId, ctx.user.id)).limit(1);
+      const pointsRow = await db.select().from(cartolinesPoints).where(eq3(cartolinesPoints.userId, ctx.user.id)).limit(1);
       const currentPoints = pointsRow[0]?.points ?? 0;
       if (currentPoints < cost) {
         throw new Error("INSUFFICIENT_POINTS");
       }
-      await db.update(figurinePoints).set({ points: currentPoints - cost }).where(eq3(figurinePoints.userId, ctx.user.id));
+      await db.update(cartolinesPoints).set({ points: currentPoints - cost }).where(eq3(cartolinesPoints.userId, ctx.user.id));
       const existing = await db.select().from(figurineProgress).where(
         and2(
           eq3(figurineProgress.userId, ctx.user.id),

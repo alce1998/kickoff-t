@@ -7,6 +7,7 @@ import { trpc } from "@/lib/trpc";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { useAchievements } from "@/hooks/useAchievements";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useMatchGuard } from "@/contexts/MatchGuardContext";
 import { Users, Copy, Check, Trophy, Star, ChevronLeft, Zap } from "lucide-react";
 
 // ─── Types (shared with DreamTeamGame) ───────────────────────────────────────
@@ -260,6 +261,13 @@ export default function DreamTeamMultiplayer() {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const [db, setDb] = useState<DB | null>(null);
   const [phase, setPhase] = useState<MultiPhase>("menu");
+  const { setMatchActive } = useMatchGuard();
+
+  useEffect(() => {
+    setMatchActive(phase !== "menu" && phase !== "create" && phase !== "join" && phase !== "result");
+    return () => setMatchActive(false);
+  }, [phase, setMatchActive]);
+
   const [roomCode, setRoomCode] = useState("");
   const [joinCode, setJoinCode] = useState("");
   const [displayName, setDisplayName] = useState("");

@@ -6,6 +6,7 @@ import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { NavigationBar } from "@/components/NavigationBar";
 import { FeedbackModal } from "@/components/FeedbackModal";
+import { useMatchGuard } from "@/contexts/MatchGuardContext";
 import { ChevronLeft, Shuffle, Star, Users, Zap, Trophy, CheckCircle, AlertTriangle } from "lucide-react";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -590,6 +591,13 @@ export default function DreamTeamGame() {
 
   const [db, setDb] = useState<DB | null>(null);
   const [phase, setPhase] = useState<Phase>("loading");
+  const { setMatchActive, confirmExit } = useMatchGuard();
+
+  useEffect(() => {
+    setMatchActive(phase !== "loading" && phase !== "setup" && phase !== "result");
+    return () => setMatchActive(false);
+  }, [phase, setMatchActive]);
+
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const [isReportOpen, setIsReportOpen] = useState(false);
   const [reportTeam, setReportTeam] = useState<{ name: string; season: string } | null>(null);
@@ -1166,7 +1174,7 @@ export default function DreamTeamGame() {
 
           {/* Header */}
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="icon" onClick={() => setPhase("setup")}>
+            <Button variant="ghost" size="icon" onClick={() => confirmExit(() => setPhase("setup"))}>
               <ChevronLeft className="h-5 w-5" />
             </Button>
             <div className="flex-1">

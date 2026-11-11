@@ -13,6 +13,7 @@ let careerPlayersData: Player[] = []; // Database con dati carriera dettagliati
 import { trpc } from '../lib/trpc';
 import { useTranslation } from 'react-i18next';
 import { useAchievements } from '@/hooks/useAchievements';
+import { useMatchGuard } from '@/contexts/MatchGuardContext';
 
 type CareerPeriod = {
   years: string;
@@ -267,9 +268,14 @@ export default function ProgressioneGame() {
   
   const { user } = useAuth();
   const { unlock } = useAchievements();
+  const { setMatchActive } = useMatchGuard();
   const recordGamePlayed = trpc.achievements.recordGamePlayed.useMutation();
   const saveScoreMutation = trpc.leaderboard.saveScore.useMutation();
   const saveUserScoreMutation = trpc.gameScores.saveScore.useMutation();
+
+  useEffect(() => {
+    setMatchActive(gameStarted && !gameOver);
+  }, [gameStarted, gameOver, setMatchActive]);
 
   // Poliglotta: record that the user played this game
   useEffect(() => {

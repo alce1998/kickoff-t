@@ -454,49 +454,6 @@ export default function GameSelection() {
             </div>
           </div>
 
-          {/* Card Cartoline */}
-          <div className={`bg-card transition-all duration-300 p-8 cursor-pointer group ${
-            isModern
-              ? "rounded-2xl border border-gray-800 hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-500/10"
-              : "border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
-          }`}
-               onClick={() => setLocation('/cartoline')}>
-            <div className="flex flex-col items-center text-center space-y-6">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="text-4xl">🏟️</span>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-display font-bold uppercase mb-3">
-                  {t('home.cartoline', 'CARTOLINE')}
-                </h2>
-                <p className="text-muted-foreground text-lg">
-                  {t('home.cartolinesDesc', "Completa l'album degli stadi del mondo! Usa i punti indizio guadagnati e ottieni le informazioni mancanti.")}
-                </p>
-                <div className="mt-3">
-                  <span className="inline-block text-white font-bold text-sm px-4 py-1 rounded-full uppercase" style={{backgroundColor: '#48db39'}}>
-                    {t('home.albumStadi', 'Album Stadi')}
-                  </span>
-                </div>
-              </div>
-
-              <div className="space-y-1 text-sm text-muted-foreground w-full text-center">
-                <p className="font-bold text-base"></p>
-                <p className="text-xs">{t('home.cartolinesInfo', '87 stadi da scoprire')}</p>
-              </div>
-
-              <Button
-                className="w-full py-6 text-xl font-bold uppercase bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setLocation('/cartoline');
-                }}
-              >
-                {t('common.apri', 'Apri Album')}
-              </Button>
-            </div>
-          </div>
-
           {/* Card Aarons-Żurkowski */}
           <div className={`bg-card transition-all duration-300 p-8 cursor-pointer group ${
             isModern

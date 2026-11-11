@@ -6,6 +6,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
 import { NavigationBar } from "@/components/NavigationBar";
 import { FeedbackModal } from "@/components/FeedbackModal";
+import { useMatchGuard } from "@/contexts/MatchGuardContext";
 
 // ─── Tipi ────────────────────────────────────────────────────────────────────
 
@@ -195,6 +196,12 @@ export default function FootsterGame() {
   const [currentPlayerIdx, setCurrentPlayerIdx] = useState(0);
   const [currentCard, setCurrentCard] = useState<FootsterPlayer | null>(null);
   const [phase, setPhase] = useState<GamePhase>("turn_start");
+  const { setMatchActive } = useMatchGuard();
+
+  useEffect(() => {
+    setMatchActive(phase !== "winner");
+    return () => setMatchActive(false);
+  }, [phase, setMatchActive]);
 
   // Slot scelto dal giocatore attivo nella propria timeline
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
