@@ -460,7 +460,7 @@
   "az": {
     "sottotitolo": "Guess the mystery footballer's surname",
     "step1Titolo": "The mystery footballer",
-    "step1Desc": "The system draws a random footballer from the Serie A 2000-2025 database. Their surname is hidden and must be guessed.",
+    "step1Desc": "The system draws a random footballer from the Serie A 2000-2027 database. Their surname is hidden and must be guessed.",
     "step2Titolo": "The alphabetical range",
     "step2Desc": "The surname lies between \"Aarons\" and \"Żurkowski\". Enter a surname from the database: if it comes before the mystery player it becomes the new lower bound, if after it becomes the new upper bound.",
     "step3Titolo": "Narrow the range",

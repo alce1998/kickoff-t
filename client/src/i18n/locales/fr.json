@@ -465,7 +465,7 @@
   "az": {
     "sottotitolo": "Devinez le nom de famille du footballeur mystérieux",
     "step1Titolo": "Le footballeur mystérieux",
-    "step1Desc": "Le système tire un footballeur aléatoire de la base de données Série A 2000-2025. Son nom de famille est caché et doit être deviné.",
+    "step1Desc": "Le système tire un footballeur aléatoire de la base de données Série A 2000-2027. Son nom de famille est caché et doit être deviné.",
     "step2Titolo": "La plage alphabétique",
     "step2Desc": "Le nom de famille se trouve entre \"Aarons\" et \"Żurkowski\". Entrez un nom de famille de la base de données : s'il est avant le joueur mystérieux il devient la nouvelle borne inférieure, s'il est après il devient la nouvelle borne supérieure.",
     "step3Titolo": "Réduire la plage",

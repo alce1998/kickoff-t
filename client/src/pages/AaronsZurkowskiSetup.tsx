@@ -74,7 +74,7 @@ export default function AaronsZurkowskiSetup() {
                     <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">1</div>
                     <div>
                       <h3 className="font-bold uppercase">{t('az.step1Titolo', 'Il calciatore misterioso')}</h3>
-                      <p className="text-muted-foreground">{t('az.step1Desc', 'Il sistema estrae un calciatore casuale dal database Serie A 2000-2025. Il suo cognome è nascosto e deve essere indovinato.')}</p>
+                      <p className="text-muted-foreground">{t('az.step1Desc', 'Il sistema estrae un calciatore casuale dal database Serie A 2000-2027. Il suo cognome è nascosto e deve essere indovinato.')}</p>
                     </div>
                   </div>
                   <div className="flex gap-3">
@@ -109,11 +109,11 @@ export default function AaronsZurkowskiSetup() {
                 </h3>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="bg-background p-3 border-2 border-black">
-                    <div className="text-2xl font-bold text-primary">5.805</div>
+                    <div className="text-2xl font-bold text-primary">6.330</div>
                     <div className="text-xs uppercase text-muted-foreground">{t('az.calciatori', 'Calciatori nel database')}</div>
                   </div>
                   <div className="bg-background p-3 border-2 border-black">
-                    <div className="text-2xl font-bold text-primary">2000-2025</div>
+                    <div className="text-2xl font-bold text-primary">2000-2027</div>
                     <div className="text-xs uppercase text-muted-foreground">{t('az.serieA', 'Serie A')}</div>
                   </div>
                 </div>

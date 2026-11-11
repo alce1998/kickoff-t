@@ -465,7 +465,7 @@
   "az": {
     "sottotitolo": "Adivinhe o apelido do futebolista misterioso",
     "step1Titolo": "O futebolista misterioso",
-    "step1Desc": "O sistema sorteia um futebolista aleatório da base de dados Série A 2000-2025. O seu apelido está oculto e deve ser adivinhado.",
+    "step1Desc": "O sistema sorteia um futebolista aleatório da base de dados Série A 2000-2027. O seu apelido está oculto e deve ser adivinhado.",
     "step2Titolo": "O intervalo alfabético",
     "step2Desc": "O apelido encontra-se entre \"Aarons\" e \"Żurkowski\". Introduza um apelido da base de dados: se for antes do jogador misterioso torna-se o novo limite inferior, se for depois torna-se o novo limite superior.",
     "step3Titolo": "Reduza o intervalo",

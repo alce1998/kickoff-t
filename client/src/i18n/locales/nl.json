@@ -465,7 +465,7 @@
   "az": {
     "sottotitolo": "Raad de achternaam van de mysterieuze voetballer",
     "step1Titolo": "De mysterieuze voetballer",
-    "step1Desc": "Het systeem trekt een willekeurige voetballer uit de Serie A 2000-2025 database. Zijn achternaam is verborgen en moet worden geraden.",
+    "step1Desc": "Het systeem trekt een willekeurige voetballer uit de Serie A 2000-2027 database. Zijn achternaam is verborgen en moet worden geraden.",
     "step2Titolo": "Het alfabetische bereik",
     "step2Desc": "De achternaam bevindt zich tussen \"Aarons\" en \"Żurkowski\". Voer een achternaam uit de database in: als die voor de mysterieuze speler komt wordt het de nieuwe ondergrens, als die erna komt de nieuwe bovengrens.",
     "step3Titolo": "Verklein het bereik",

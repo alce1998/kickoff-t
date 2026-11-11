@@ -466,7 +466,7 @@
   "az": {
     "sottotitolo": "Adivina el apellido del futbolista misterioso",
     "step1Titolo": "El futbolista misterioso",
-    "step1Desc": "El sistema extrae un futbolista aleatorio de la base de datos Serie A 2000-2025. Su apellido está oculto y debe ser adivinado.",
+    "step1Desc": "El sistema extrae un futbolista aleatorio de la base de datos Serie A 2000-2027. Su apellido está oculto y debe ser adivinado.",
     "step2Titolo": "El rango alfabético",
     "step2Desc": "El apellido se encuentra entre \"Aarons\" y \"Żurkowski\". Introduce un apellido de la base de datos: si está antes del jugador misterioso se convierte en el nuevo límite inferior, si está después en el nuevo límite superior.",
     "step3Titolo": "Reduce el rango",

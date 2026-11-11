@@ -121,9 +121,9 @@ export default function AaronsZurkowskiGame() {
 
   // ─── Caricamento database ───────────────────────────────────────────────────
 
-  // DB 1: giocatori estraibili (2.041 con >= 30 presenze Serie A)
+  // DB 1: giocatori estraibili (2.209 con >= 30 presenze Serie A 2000-2027)
   useEffect(() => {
-    fetch('/data/player_serie_a_apps_only.b7bc76ba.json')
+    fetch('/data/player_serie_a_apps_only.b7bc76ba.json?v=202627')
       .then(r => r.json())
       .then((data: Player[]) => {
         setAllPlayers(data);
@@ -132,9 +132,9 @@ export default function AaronsZurkowskiGame() {
       .catch(() => toast.error(t('az.erroreCaricamento', 'Errore nel caricamento del database')));
   }, [t]);
 
-  // DB 2: giocatori inseribili dall'utente (5.798 dal database grande)
+  // DB 2: giocatori inseribili dall'utente (6.330 dal database completo 2000-2027)
   useEffect(() => {
-    fetch('/data/serie_a_input_players.eb6552ce.json')
+    fetch('/data/serie_a_input_players.eb6552ce.json?v=202627')
       .then(r => r.json())
       .then((data: InputPlayer[]) => {
         // Costruisce lista cognomi unici ordinati alfabeticamente

@@ -459,7 +459,7 @@
   "az": {
     "sottotitolo": "Indovina il cognome del calciatore misterioso",
     "step1Titolo": "Il calciatore misterioso",
-    "step1Desc": "Il sistema estrae un calciatore casuale dal database Serie A 2000-2025. Il suo cognome è nascosto e deve essere indovinato.",
+    "step1Desc": "Il sistema estrae un calciatore casuale dal database Serie A 2000-2027. Il suo cognome è nascosto e deve essere indovinato.",
     "step2Titolo": "Il range alfabetico",
     "step2Desc": "Il cognome si trova tra \"Aarons\" e \"Żurkowski\". Inserisci un cognome presente nel database: se è prima del calciatore misterioso diventa il nuovo limite basso, se è dopo diventa il nuovo limite alto.",
     "step3Titolo": "Restringi il range",

@@ -465,7 +465,7 @@
   "az": {
     "sottotitolo": "Errate den Nachnamen des mysteriösen Fußballers",
     "step1Titolo": "Der mysteriöse Fußballer",
-    "step1Desc": "Das System zieht einen zufälligen Fußballer aus der Serie A 2000-2025 Datenbank. Sein Nachname ist versteckt und muss erraten werden.",
+    "step1Desc": "Das System zieht einen zufälligen Fußballer aus der Serie A 2000-2027 Datenbank. Sein Nachname ist versteckt und muss erraten werden.",
     "step2Titolo": "Der alphabetische Bereich",
     "step2Desc": "Der Nachname liegt zwischen \"Aarons\" und \"Żurkowski\". Gib einen Nachnamen aus der Datenbank ein: Liegt er vor dem mysteriösen Spieler, wird er die neue untere Grenze, liegt er danach die neue obere Grenze.",
     "step3Titolo": "Bereich einschränken",
