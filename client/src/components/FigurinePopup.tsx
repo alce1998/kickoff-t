@@ -68,27 +68,63 @@ function normalizeStr(s: string): string {
     .trim();
 }
 
+const COMPOUND_GIVEN_NAMES = new Set([
+  "gian marco",
+  "jose luis",
+  "fabian natale",
+  "antonio carlos",
+  "john arne",
+  "marc oliver",
+  "tore andre",
+  "juan pablo",
+  "joseph dayo",
+  "ramos borges",
+]);
+
+function extractSurname(fullName: string): string {
+  const cleaned = fullName.replace(/\s+Jr\.?$/i, "").trim();
+  const parts = cleaned.split(/\s+/);
+  if (parts.length <= 1) return parts[0] || fullName;
+  if (parts.length === 2) return parts[1];
+  const firstTwo = normalizeStr(parts[0] + " " + parts[1]);
+  if (COMPOUND_GIVEN_NAMES.has(firstTwo)) {
+    return parts.slice(2).join(" ");
+  }
+  // Prepositions/particles (Di, Del, Dalla, Dall', El, Van, De, Da, ecc.) and compound surnames stay part of the surname
+  return parts.slice(1).join(" ");
+}
+
 function matchesPlayerName(guess: string, fullName: string): boolean {
   const normGuess = normalizeStr(guess);
   const normFull = normalizeStr(fullName);
+  const normSurname = normalizeStr(extractSurname(fullName));
   if (!normGuess) return false;
-  if (normGuess === normFull) return true;
-  const parts = fullName.split(" ").map(normalizeStr).filter(Boolean);
-  return parts.some((p) => p.length > 2 && p === normGuess);
+  return normGuess === normFull || normGuess === normSurname;
 }
 
-function maskPlayerName(fullName: string): string {
-  return fullName
-    .split(" ")
-    .map((part) => {
-      if (part.length <= 2) return part[0] + ".";
-      return (
-        part[0] +
-        "_".repeat(Math.max(1, part.length - 2)) +
-        part[part.length - 1]
-      );
+function getSurnameInitials(fullName: string): string {
+  const surname = extractSurname(fullName);
+  return surname
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word) => {
+      if (word.includes("-")) {
+        return word
+          .split("-")
+          .filter(Boolean)
+          .map((w) => w[0].toUpperCase() + ".")
+          .join("-");
+      }
+      const apoIdx = word.search(/['’]/);
+      // Handle apostrophe prepositions like D'Ambrosio, Dall'Oglio, Dell'Orco, O'Neill, N'Koulou
+      if (apoIdx > 0 && apoIdx <= 4 && word.length - 1 - apoIdx >= 2) {
+        const prefix = word.slice(0, apoIdx);
+        const after = word.slice(apoIdx + 1);
+        return prefix[0].toUpperCase() + "'" + after[0].toUpperCase() + ".";
+      }
+      return word[0].toUpperCase() + ".";
     })
-    .join("  ");
+    .join(" ");
 }
 
 function FigurinaThumb({
@@ -778,7 +814,7 @@ export function FigurinePopup() {
                           )}
                         </div>
 
-                        {/* Indizio 3: Iniziali Nome (3 pt) */}
+                        {/* Indizio 3: Iniziali Cognome (3 pt) */}
                         <div
                           className={`border-2 border-black p-2.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] ${
                             selectedHints.includes("iniziali")
@@ -787,11 +823,11 @@ export function FigurinePopup() {
                           }`}
                         >
                           <div className="text-[10px] font-bold uppercase text-muted-foreground mb-1">
-                            Iniziali Nome
+                            Iniziali Cognome
                           </div>
                           {selectedHints.includes("iniziali") ? (
-                            <div className="font-mono font-bold text-xs tracking-wider">
-                              {maskPlayerName(selectedPlayer.name)}
+                            <div className="font-mono font-bold text-sm tracking-wider">
+                              {getSurnameInitials(selectedPlayer.name)}
                             </div>
                           ) : (
                             <div className="font-bold text-xs text-muted-foreground">
