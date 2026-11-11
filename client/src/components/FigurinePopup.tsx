@@ -14,6 +14,7 @@ import {
   Maximize2,
   Minimize2,
 } from "lucide-react";
+import { ProtectedImage } from "@/components/ProtectedImage";
 
 export interface FigurinaPlayer {
   numero: number;
@@ -196,19 +197,13 @@ function FigurinaThumb({
       }`}
     >
       {visible && (
-        <img
+        <ProtectedImage
           src={player.photo_url}
-          alt="Figurina"
-          loading="lazy"
-          draggable={false}
-          onContextMenu={(e) => e.preventDefault()}
+          objectPosition="top"
+          canvasWidth={300}
+          canvasHeight={400}
           onLoad={() => setLoaded(true)}
-          onError={(e) => {
-            (e.target as HTMLImageElement).src =
-              "https://via.placeholder.com/300x400?text=Figurina";
-            setLoaded(true);
-          }}
-          className={`w-full h-full object-cover object-top select-none pointer-events-none transition-transform duration-300 group-hover:scale-105 ${
+          className={`w-full h-full transition-transform duration-300 group-hover:scale-105 ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
         />
@@ -270,21 +265,15 @@ function StadioThumb({
     >
       <div className="aspect-[4/3] relative overflow-hidden bg-gray-200">
         {visible && (
-          <img
+          <ProtectedImage
             src={stadio.foto}
-            alt={isSolved ? stadio.nome : "???"}
-            loading="lazy"
-            draggable={false}
-            onContextMenu={(e) => e.preventDefault()}
+            objectPosition="center"
+            canvasWidth={400}
+            canvasHeight={300}
             onLoad={() => setLoaded(true)}
-            className={`w-full h-full object-cover select-none pointer-events-none transition-all duration-500 group-hover:scale-105 ${
+            className={`w-full h-full transition-all duration-500 group-hover:scale-105 ${
               isSolved ? "" : "grayscale brightness-75"
             } ${loaded ? "opacity-100" : "opacity-0"}`}
-            onError={(e) => {
-              (e.target as HTMLImageElement).src =
-                "https://via.placeholder.com/400x300?text=Stadio";
-              setLoaded(true);
-            }}
           />
         )}
         <div
@@ -396,7 +385,7 @@ export function FigurinePopup() {
   // Load both datasets
   useEffect(() => {
     setLoadingPlayers(true);
-    fetch("/data/figurine_players.json?v=anticheat1")
+    fetch("/data/figurine_players.json?v=anticheat2")
       .then((r) => r.json())
       .then((data: FigurinaPlayer[]) => {
         setPlayers(data);
@@ -405,7 +394,7 @@ export function FigurinePopup() {
       .catch(() => setLoadingPlayers(false));
 
     setLoadingStadi(true);
-    fetch("/data/stadi_cartoline.65c9338a.json?v=anticheat1")
+    fetch("/data/stadi_cartoline.65c9338a.json?v=anticheat2")
       .then((r) => r.json())
       .then((data: Stadio[]) => {
         setStadi(data);
@@ -1142,16 +1131,12 @@ export function FigurinePopup() {
                   onDragStart={(e) => e.preventDefault()}
                   className="relative max-w-xs mx-auto aspect-[3/4] border-4 border-black bg-white select-none shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden"
                 >
-                  <img
+                  <ProtectedImage
                     src={selectedPlayer.photo_url}
-                    alt={isSelectedPlayerSolved ? selectedPlayer.name : "???"}
-                    draggable={false}
-                    onContextMenu={(e) => e.preventDefault()}
-                    className="w-full h-full object-cover object-top select-none pointer-events-none"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src =
-                        "https://via.placeholder.com/400x530?text=Figurina";
-                    }}
+                    objectPosition="top"
+                    canvasWidth={480}
+                    canvasHeight={640}
+                    className="w-full h-full"
                   />
                   <div
                     className="absolute inset-0 z-10 select-none"
@@ -1483,18 +1468,14 @@ export function FigurinePopup() {
                   onDragStart={(e) => e.preventDefault()}
                   className="relative border-4 border-black select-none shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden bg-white"
                 >
-                  <img
+                  <ProtectedImage
                     src={selectedStadio.foto}
-                    alt={isSelectedStadioSolved ? selectedStadio.nome : "???"}
-                    draggable={false}
-                    onContextMenu={(e) => e.preventDefault()}
-                    className={`w-full aspect-video object-cover select-none pointer-events-none transition-all duration-700 ${
+                    objectPosition="center"
+                    canvasWidth={800}
+                    canvasHeight={450}
+                    className={`w-full aspect-video transition-all duration-700 ${
                       isSelectedStadioSolved ? "" : "grayscale brightness-75"
                     }`}
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src =
-                        "https://via.placeholder.com/800x450?text=Stadio";
-                    }}
                   />
                   <div
                     className="absolute inset-0 z-10 select-none"

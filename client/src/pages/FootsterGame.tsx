@@ -7,6 +7,7 @@ import { getLoginUrl } from "@/const";
 import { NavigationBar } from "@/components/NavigationBar";
 import { FeedbackModal } from "@/components/FeedbackModal";
 import { useMatchGuard } from "@/contexts/MatchGuardContext";
+import { ProtectedImage } from "@/components/ProtectedImage";
 
 // ─── Tipi ────────────────────────────────────────────────────────────────────
 
@@ -237,7 +238,7 @@ export default function FootsterGame() {
 
   // ─── Carica database ───────────────────────────────────────────────────────
   useEffect(() => {
-    fetch("/data/footster_players.0d91baeb.json?v=anticheat1")
+    fetch("/data/footster_players.0d91baeb.json?v=anticheat2")
       .then((r) => r.json())
       .then((data: FootsterPlayer[]) => {
         setDb(data);
@@ -595,12 +596,12 @@ export default function FootsterGame() {
           className="relative w-48 h-64 border-4 border-black select-none shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden bg-gray-200 flex-shrink-0"
         >
           {!imgError ? (
-            <img
+            <ProtectedImage
               src={currentCard.photo_url}
-              alt="Calciatore"
-              draggable={false}
-              onContextMenu={(e) => e.preventDefault()}
-              className="w-full h-full object-cover object-top select-none pointer-events-none"
+              objectPosition="top"
+              canvasWidth={360}
+              canvasHeight={480}
+              className="w-full h-full"
               onError={() => setImgError(true)}
             />
           ) : (
@@ -843,15 +844,12 @@ function TimelineSlots({ timeline, onSlotSelect, selectedSlot, highlightSlot, di
                 onDragStart={(e) => e.preventDefault()}
                 className="flex-shrink-0 w-20 h-28 border-2 border-black overflow-hidden bg-gray-200 relative select-none"
               >
-                <img
+                <ProtectedImage
                   src={timeline[i].player.photo_url}
-                  alt="Carta"
-                  draggable={false}
-                  onContextMenu={(e) => e.preventDefault()}
-                  className="w-full h-full object-cover object-top select-none pointer-events-none"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
-                  }}
+                  objectPosition="top"
+                  canvasWidth={160}
+                  canvasHeight={224}
+                  className="w-full h-full"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/80 p-0.5 text-center">
                   <div className="text-yellow-300 font-black text-sm leading-none">
