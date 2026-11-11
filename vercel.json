@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npx vite build",
+  "outputDirectory": "dist/public",
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "{client/public/dreamteam_db.d7d8b7b0.json,client/src/data/matches_verified_100.json}"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}

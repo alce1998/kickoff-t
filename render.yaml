@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: kickoff-trivia
+    runtime: node
+    plan: free
+    buildCommand: pnpm install && pnpm run build
+    startCommand: npx drizzle-kit migrate && pnpm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
