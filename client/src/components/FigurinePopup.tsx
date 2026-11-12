@@ -15,6 +15,7 @@ import {
   Minimize2,
 } from "lucide-react";
 import { ProtectedImage } from "@/components/ProtectedImage";
+import { FigurinaSolvedOverlay } from "@/components/FigurineCard";
 
 export interface FigurinaPlayer {
   numero: number;
@@ -216,9 +217,12 @@ function FigurinaThumb({
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
       {isSolved && (
-        <div className="absolute top-1.5 right-1.5 z-20 bg-green-500 text-white rounded-full p-1 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
-          <Trophy className="w-3.5 h-3.5" />
-        </div>
+        <FigurinaSolvedOverlay
+          size="sm"
+          playerName={player.name}
+          nationality={player.nationality}
+          role={player.position}
+        />
       )}
     </div>
   );
@@ -1142,11 +1146,13 @@ export function FigurinePopup() {
                     className="absolute inset-0 z-10 select-none"
                     onContextMenu={(e) => e.preventDefault()}
                   />
-                  {isSelectedPlayerSolved && (
-                    <div className="absolute top-3 right-3 z-20 bg-green-500 text-white px-2.5 py-1 font-bold uppercase text-xs border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1">
-                      <Trophy className="w-3.5 h-3.5" />
-                      Sbloccata!
-                    </div>
+                  {(isSelectedPlayerSolved || justSolved) && (
+                    <FigurinaSolvedOverlay
+                      size="lg"
+                      playerName={selectedPlayer.name}
+                      nationality={selectedPlayer.nationality}
+                      role={selectedPlayer.position}
+                    />
                   )}
                 </div>
 

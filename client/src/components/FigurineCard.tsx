@@ -1,29 +1,108 @@
-// FigurineCard.tsx – displays a player figurine with overlay when guessed
+// FigurineCard.tsx – overlay vintage per le figurine indovinate
 import React from "react";
 import { ProtectedImage } from "@/components/ProtectedImage";
 
-/**
- * Convert a country name or ISO code to a flag emoji.
- * If the input is a two‑letter ISO code it will be transformed to the
- * corresponding regional indicator symbols. For longer names we try to
- * derive the code by taking the first two alphabetic characters.
- */
-function getFlagEmoji(country: string): string {
-  const iso = country
-    .toUpperCase()
-    .replace(/[^A-Z]/g, "")
-    .slice(0, 2);
-  if (iso.length < 2) return "";
-  const offset = 0x1f1e6 - 65; // 'A' => regional indicator offset
-  const chars = [...iso].map((c) => String.fromCodePoint(c.charCodeAt(0) + offset)).join("");
-  return chars;
+const FLAG_BY_COUNTRY: Record<string, string> = {
+  "Italia": "🇮🇹", "Argentina": "🇦🇷", "Slovenia": "🇸🇮", "Macedonia del Nord": "🇲🇰",
+  "Francia": "🇫🇷", "Polonia": "🇵🇱", "Slovacchia": "🇸🇰", "Colombia": "🇨🇴",
+  "Inghilterra": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "Olanda": "🇳🇱", "Paesi Bassi": "🇳🇱", "Suriname": "🇸🇷",
+  "Cile": "🇨🇱", "Germania": "🇩🇪", "Serbia": "🇷🇸", "Belgio": "🇧🇪", "Spagna": "🇪🇸",
+  "Repubblica Ceca": "🇨🇿", "Canada": "🇨🇦", "Croazia": "🇭🇷", "Brasile": "🇧🇷",
+  "Romania": "🇷🇴", "Danimarca": "🇩🇰", "Svezia": "🇸🇪", "Ghana": "🇬🇭", "Albania": "🇦🇱",
+  "Uruguay": "🇺🇾", "Montenegro": "🇲🇪", "Svizzera": "🇨🇭", "Finlandia": "🇫🇮",
+  "Kosovo": "🇽🇰", "Turchia": "🇹🇷", "Somalia": "🇸🇴", "Venezuela": "🇻🇪",
+  "Bosnia-Erzegovina": "🇧🇦", "Lussemburgo": "🇱🇺", "Portogallo": "🇵🇹", "Australia": "🇦🇺",
+  "Martinica": "🇲🇶", "Senegal": "🇸🇳", "Guinea": "🇬🇳", "Ucraina": "🇺🇦", "Grecia": "🇬🇷",
+  "Armenia": "🇦🇲", "Moldavia": "🇲🇩", "Costa d'Avorio": "🇨🇮", "Indonesia": "🇮🇩",
+  "Guadalupa": "🇬🇵", "Austria": "🇦🇹", "Nigeria": "🇳🇬", "Bulgaria": "🇧🇬", "Ungheria": "🇭🇺",
+  "Guinea Equatoriale": "🇬🇶", "Giappone": "🇯🇵", "Stati Uniti": "🇺🇸", "Islanda": "🇮🇸",
+  "Algeria": "🇩🇿", "Messico": "🇲🇽", "Guiana francese": "🇬🇫", "Marocco": "🇲🇦",
+  "Russia": "🇷🇺", "Norvegia": "🇳🇴", "RD del Congo": "🇨🇩", "Congo": "🇨🇬", "Perù": "🇵🇪",
+  "Honduras": "🇭🇳", "Gambia": "🇬🇲", "Uzbekistan": "🇺🇿", "Sierra Leone": "🇸🇱",
+  "Costarica": "🇨🇷", "Cipro": "🇨🇾", "Camerun": "🇨🇲", "Ecuador": "🇪🇨", "Lituania": "🇱🇹",
+  "Giamaica": "🇯🇲", "Liechtenstein": "🇱🇮", "Mali": "🇲🇱", "Scozia": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  "Zambia": "🇿🇲", "Tunisia": "🇹🇳", "Paraguay": "🇵🇾", "Nuova Zelanda": "🇳🇿", "Georgia": "🇬🇪",
+  "Egitto": "🇪🇬", "Guyana": "🇬🇾", "Sudafrica": "🇿🇦", "Burkina Faso": "🇧🇫", "Kenia": "🇰🇪",
+  "Angola": "🇦🇴", "Iraq": "🇮🇶", "Panama": "🇵🇦", "Estonia": "🇪🇪", "Zimbabwe": "🇿🇼",
+  "Chad": "🇹🇩", "Repubblica Centrafricana": "🇨🇫", "San Marino": "🇸🇲", "Capo Verde": "🇨🇻",
+  "Riunione": "🇷🇪", "Corea del Sud": "🇰🇷", "Togo": "🇹🇬", "Bielorussia": "🇧🇾",
+  "Kazakistan": "🇰🇿", "Iran": "🇮🇷", "Galles": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+};
+
+const COUNTRY_NAMES = Object.keys(FLAG_BY_COUNTRY).sort((a, b) => b.length - a.length);
+
+/** "Argentina Italia" -> "🇦🇷🇮🇹" (riconosce anche nomi composti). */
+export function getFlags(nationality: string): string {
+  let rest = nationality || "";
+  const flags: string[] = [];
+  while (rest.trim()) {
+    const r = rest.trim();
+    const hit = COUNTRY_NAMES.find((n) => r.startsWith(n));
+    if (hit) {
+      flags.push(FLAG_BY_COUNTRY[hit]);
+      rest = r.slice(hit.length);
+    } else {
+      const i = r.indexOf(" ");
+      rest = i === -1 ? "" : r.slice(i + 1);
+    }
+  }
+  return flags.join(" ");
+}
+
+type OverlayProps = {
+  playerName: string;
+  nationality: string;
+  role: string;
+  /** "sm" per le miniature della griglia, "lg" per la figurina ingrandita */
+  size?: "sm" | "lg";
+};
+
+/** Cornice vintage + dettagli: va posizionato dentro un contenitore `relative`. */
+export function FigurinaSolvedOverlay({ playerName, nationality, role, size = "sm" }: OverlayProps) {
+  const flags = getFlags(nationality);
+  const sm = size === "sm";
+  const serif = { fontFamily: "'Georgia', 'Times New Roman', serif" };
+  return (
+    <div className="absolute inset-0 z-[15] pointer-events-none">
+      {/* cornice crema interna */}
+      <div
+        className="absolute inset-0 border-[#f1e4c3]"
+        style={{ borderWidth: sm ? 3 : 8, boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.6)" }}
+      />
+      {/* nazionalità (sinistra) e ruolo (destra) */}
+      <div
+        className="absolute left-1 top-1 bg-[#f1e4c3] text-black border border-black px-1 leading-tight"
+        style={{ ...serif, fontSize: sm ? 10 : 16 }}
+      >
+        {flags}
+      </div>
+      <div
+        className="absolute right-1 top-1 bg-[#f1e4c3] text-black border border-black px-1 uppercase font-bold tracking-wide leading-tight"
+        style={{ ...serif, fontSize: sm ? 8 : 12 }}
+      >
+        {role}
+      </div>
+      {/* banda nera col nome */}
+      <div
+        className="absolute bottom-0 left-0 w-full bg-black text-white text-center uppercase font-bold tracking-wider truncate"
+        style={{
+          ...serif,
+          fontSize: sm ? 10 : 18,
+          padding: sm ? "4px 2px" : "10px 6px",
+          borderTop: "2px solid #f1e4c3",
+        }}
+      >
+        {playerName}
+      </div>
+    </div>
+  );
 }
 
 type FigurineCardProps = {
-  src: string; // obfuscated image URL – will be decoded by ProtectedImage
+  src: string;
   playerName: string;
-  nationality: string; // e.g. "Italia" – will be turned into a flag emoji if possible
-  role: string; // e.g. "Portiere"
+  nationality: string;
+  role: string;
   guessed: boolean;
 };
 
@@ -33,34 +112,11 @@ export const FigurineCard: React.FC<FigurineCardProps> = ({
   nationality,
   role,
   guessed,
-}) => {
-  const flag = getFlagEmoji(nationality);
-
-  return (
-    <div className="relative w-48 h-64 select-none overflow-hidden rounded" title={playerName}>
-      {/* Image drawn on a canvas to avoid right‑click inspection */}
-      <ProtectedImage src={src} className="w-full h-full object-cover" />
-
-      {/* Top‑left flag + role – always visible */}
-      <div className="absolute top-1 left-1 bg-black/70 text-white text-xs px-1 py-0.5 rounded flex items-center gap-1">
-        {flag && <span>{flag}</span>}
-        <span>{role}</span>
-      </div>
-
-      {/* Bottom black band – only when the figurine has been guessed */}
-      {guessed && (
-        <div
-          className="absolute bottom-0 left-0 w-full h-12 bg-black/80 flex items-center justify-center"
-          style={{
-            backgroundImage: "url('/static/vintage-paper-texture.png')",
-            backgroundSize: "cover",
-          }}
-        >
-          <span className="text-white text-sm font-bold drop-shadow">
-            {playerName}
-          </span>
-        </div>
-      )}
-    </div>
-  );
-};
+}) => (
+  <div className="relative w-48 h-64 select-none overflow-hidden" title={playerName}>
+    <ProtectedImage src={src} className="w-full h-full" />
+    {guessed && (
+      <FigurinaSolvedOverlay playerName={playerName} nationality={nationality} role={role} />
+    )}
+  </div>
+);
