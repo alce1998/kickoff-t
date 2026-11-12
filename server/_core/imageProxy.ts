@@ -35,14 +35,8 @@ export function registerImageProxyRoutes(app: Express) {
         ];
         for (const candidate of localCandidates) {
           if (fs.existsSync(candidate)) {
-            const ext = path.extname(candidate).toLowerCase();
-            const mime =
-              ext === ".png"
-                ? "image/png"
-                : ext === ".webp"
-                  ? "image/webp"
-                  : "image/jpeg";
-            res.setHeader("Content-Type", mime);
+            res.setHeader('Access-Control-Allow-Origin', '*');
+            res.setHeader('Content-Type', mime);
             res.send(fs.readFileSync(candidate));
             return;
           }

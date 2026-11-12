@@ -152,7 +152,27 @@ export function ProtectedImage({
         return;
       }
 
-      const attemptLoad = (attempt: number) => {
+      // Helper to generate Wikimedia thumbnail URL from the original image URL.
+      const getThumbnailUrl = (original: string): string | null => {
+        try {
+          const url = new URL(original);
+          const parts = url.pathname.split('/');
+          // Expect .../commons/<hash1>/<hash2>/<filename>
+          const idx = parts.findIndex(p => p === 'commons');
+          if (idx === -1 || parts.length < idx + 4) return null;
+          const hash1 = parts[idx + 1];
+          const hash2 = parts[idx + 2];
+          const filename = parts.slice(idx + 3).join('/');
+          // Construct thumbnail path: /wikipedia/commons/thumb/${hash1}/${hash2}/${filename}/500px-${filename}
+          const thumbPath = `/wikipedia/commons/thumb/${hash1}/${hash2}/${filename}/500px-${filename}`;
+          return `${url.origin}${thumbPath}`;
+        } catch {
+          return null;
+        }
+      };
+
+      // Load image with retries and optional thumbnail fallback.
+      const attemptLoad = (url: string, attempt: number, triedFallback: boolean) => {
         if (cancelled) {
           nextInQueue();
           return;
@@ -164,7 +184,8 @@ export function ProtectedImage({
         img.onload = () => {
           nextInQueue();
           if (cancelled) return;
-          cacheImage(realUrl, img);
+          // Cache successful load (primary or fallback).
+          cacheImage(url, img);
           if (canvasRef.current) {
             drawCover(canvasRef.current, img, objectPosition);
           }
@@ -176,34 +197,44 @@ export function ProtectedImage({
             nextInQueue();
             return;
           }
+          // Retry up to 3 times for the same URL.
           if (attempt < 3) {
             retryTimer = setTimeout(() => {
-              attemptLoad(attempt + 1);
+              attemptLoad(url, attempt + 1, triedFallback);
             }, 700 * (attempt + 1));
             return;
           }
+          // If not yet tried fallback, attempt thumbnail URL.
+          if (!triedFallback) {
+            const fallback = getThumbnailUrl(url);
+            if (fallback && fallback !== url) {
+              attemptLoad(fallback, 0, true);
+              return;
+            }
+          }
+          // All attempts failed – draw placeholder.
           nextInQueue();
           const canvas = canvasRef.current;
           if (canvas) {
-            const ctx = canvas.getContext("2d");
+            const ctx = canvas.getContext('2d');
             if (ctx) {
-              ctx.fillStyle = "#e5e7eb";
+              ctx.fillStyle = '#e5e7eb';
               ctx.fillRect(0, 0, canvas.width, canvas.height);
-              ctx.fillStyle = "#6b7280";
-              ctx.font = "bold 28px sans-serif";
-              ctx.textAlign = "center";
-              ctx.textBaseline = "middle";
-              ctx.fillText("?", canvas.width / 2, canvas.height / 2);
+              ctx.fillStyle = '#6b7280';
+              ctx.font = 'bold 28px sans-serif';
+              ctx.textAlign = 'center';
+              ctx.textBaseline = 'middle';
+              ctx.fillText('?', canvas.width / 2, canvas.height / 2);
             }
           }
           onLoad?.();
           onError?.();
         };
 
-        img.src = realUrl;
+        img.src = url;
       };
 
-      attemptLoad(0);
+      attemptLoad(realUrl, 0, false);
     });
 
     return () => {
