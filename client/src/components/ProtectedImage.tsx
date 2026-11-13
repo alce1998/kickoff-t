@@ -99,6 +99,8 @@ function drawCover(
   }
 
   ctx.clearRect(0, 0, cw, ch);
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
   ctx.drawImage(img, sx, sy, sw, sh, 0, 0, cw, ch);
 }
 
